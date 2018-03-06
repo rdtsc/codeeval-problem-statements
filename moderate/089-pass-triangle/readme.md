@@ -6,7 +6,7 @@
     from top to bottom is <b>27</b>.
 </p>
 <pre>   <u>5</u>
-<u>9</u> 6
+  <u>9</u> 6
  4 <u>6</u> 8
 0 <u>7</u> 1 5</pre>
 <p>
