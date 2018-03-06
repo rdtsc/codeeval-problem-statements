@@ -1,9 +1,5 @@
 <h2>Bay Bridges</h2>
 
-<style type="text/css">
-    #map-canvas { height: 100% }
-</style>
-
 <div id="map-canvas"></div>
 
 <br>

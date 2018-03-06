@@ -1,16 +1,5 @@
 <h2>Ray of Light</h2>
 
-<style>
-    .s-gray {
-        color: #ddd;
-        background-color: #ddd;
-    }
-    .s-dimmed {
-        color: #888;
-        background-color: #ddd;
-    }
-</style>
-
 <h3>Challenge Description:</h3>
 
 <p>

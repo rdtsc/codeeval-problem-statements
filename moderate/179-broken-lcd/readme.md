@@ -1,11 +1,5 @@
 <h2>Broken LCD</h2>
 
-<style>
-    img.figure {
-        padding-bottom: 20px;
-    }
-</style>
-
 <h3>Challenge Description:</h3>
 
 <p>

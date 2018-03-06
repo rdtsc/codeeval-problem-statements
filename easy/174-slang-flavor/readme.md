@@ -6,12 +6,7 @@
     other end punctuation mark (period &#x2018;.&#x2019;, exclamation mark &#x2018;!&#x2019;, or question mark &#x2018;?&#x2019;) with one of
     the following slang phrases, selecting them one after another:
 </p>
-<style>
-    span.fw {
-        color: #000000;
-        font-family: "andale mono", consolas, monaco, "lucida console", "courier new", courier, monospace;
-    }
-</style>
+
 <ol>
 <li>&#x2018;<span class="fw">, yeah!</span>&#x2019;</li>
 <li>&#x2018;<span class="fw">, this is crazy, I tell ya.</span>&#x2019;</li>
