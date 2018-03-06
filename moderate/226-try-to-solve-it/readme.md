@@ -41,9 +41,9 @@ it</pre>
 <li>The number of test cases is 40.</li>
 </ol>
 
-<h3>Hint (select text below):</h3>
+<h3>Hint:</h3>
 
-<h3>
-    a | b | c | d | e | f | g | h | i | j | k | l | m<br>
-    u | v | w | x | y | z | n | o | p | q | r | s | t
-</h3>
+<pre>
+a | b | c | d | e | f | g | h | i | j | k | l | m
+u | v | w | x | y | z | n | o | p | q | r | s | t
+</pre>
