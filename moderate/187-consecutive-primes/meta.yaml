@@ -1,0 +1,5 @@
+problemId: 187
+name: Consecutive Primes
+category: Moderate
+summary: Determine how many ways the numbers can be arranged such that every consecutive pair sums to a prime.
+url: "https://www.codeeval.com/browse/187/"

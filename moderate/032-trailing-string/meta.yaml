@@ -1,0 +1,5 @@
+problemId: 32
+name: Trailing String
+category: Moderate
+summary: Determine if a string 'B' occurs at the end of string 'A'.
+url: https://www.codeeval.com/browse/32/

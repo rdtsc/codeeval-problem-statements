@@ -1,0 +1,5 @@
+problemId: 129
+name: Routing Problem
+category: Hard
+summary: Find all the shortest paths for the package between two specified hosts.
+url: "https://www.codeeval.com/browse/129/"

@@ -1,0 +1,1442 @@
+[
+  {
+    "id": "1",
+    "name": "Fizz Buzz",
+    "summary": "A simple game involving divisibility tests.",
+    "category": "easy"
+  },
+  {
+    "id": "2",
+    "name": "Longest Lines",
+    "summary": "Finding the 'N' longest lines within a file.",
+    "category": "moderate"
+  },
+  {
+    "id": "3",
+    "name": "Prime Palindrome",
+    "summary": "Biggest prime palindrome < 1000.",
+    "category": "easy"
+  },
+  {
+    "id": "4",
+    "name": "Sum of Primes",
+    "summary": "Sum of first 1000 primes.",
+    "category": "easy"
+  },
+  {
+    "id": "5",
+    "name": "Detecting Cycles",
+    "summary": "Detecting loops within a sequence.",
+    "category": "moderate"
+  },
+  {
+    "id": "6",
+    "name": "Longest Common Subsequence",
+    "summary": "LCS between two strings.",
+    "category": "hard"
+  },
+  {
+    "id": "7",
+    "name": "Prefix expressions",
+    "summary": "Evaluating a prefix expression.",
+    "category": "hard"
+  },
+  {
+    "id": "8",
+    "name": "Reverse words",
+    "summary": "Reversing an input sequence of words.",
+    "category": "easy"
+  },
+  {
+    "id": "9",
+    "name": "Stack Implementation",
+    "summary": "Implement a stack interface.",
+    "category": "moderate"
+  },
+  {
+    "id": "10",
+    "name": "Mth to last element",
+    "summary": "Determine the Mth to last element of a list.",
+    "category": "moderate"
+  },
+  {
+    "id": "11",
+    "name": "Lowest Common Ancestor",
+    "summary": "Determine the lowest common ancestor within a tree.",
+    "category": "moderate"
+  },
+  {
+    "id": "12",
+    "name": "First Non-Repeated Character",
+    "summary": "Find the first non repeated character in a string.",
+    "category": "moderate"
+  },
+  {
+    "id": "13",
+    "name": "Remove Characters",
+    "summary": "Delete specific characters from a string.",
+    "category": "moderate"
+  },
+  {
+    "id": "14",
+    "name": "String Permutations",
+    "summary": "Print out all permutations of a string.",
+    "category": "hard"
+  },
+  {
+    "id": "15",
+    "name": "Endianness",
+    "summary": "Determine the endianness of a system.",
+    "category": "moderate"
+  },
+  {
+    "id": "16",
+    "name": "Number of Ones",
+    "summary": "Determine the number of one bits in an integer.",
+    "category": "moderate"
+  },
+  {
+    "id": "17",
+    "name": "Sum of integers",
+    "summary": "Determine the largest sum of contiguous integers in an array.",
+    "category": "moderate"
+  },
+  {
+    "id": "18",
+    "name": "Multiples of a Number",
+    "summary": "Multiples of a number greater than another number.",
+    "category": "easy"
+  },
+  {
+    "id": "19",
+    "name": "Bit Positions",
+    "summary": "Bits in position x,y are same or different.",
+    "category": "easy"
+  },
+  {
+    "id": "20",
+    "name": "Lowercase",
+    "summary": "Lowercase text.",
+    "category": "easy"
+  },
+  {
+    "id": "21",
+    "name": "Sum of Digits",
+    "summary": "Sum of digits comprising a number.",
+    "category": "easy"
+  },
+  {
+    "id": "22",
+    "name": "Fibonacci Series",
+    "summary": "Print out the nth fibonacci number.",
+    "category": "easy"
+  },
+  {
+    "id": "23",
+    "name": "Multiplication Tables",
+    "summary": "Print out the grade school multiplication table upto 12*12.",
+    "category": "easy"
+  },
+  {
+    "id": "24",
+    "name": "Sum of Integers from File",
+    "summary": "Print the sum of integers read from a file.",
+    "category": "easy"
+  },
+  {
+    "id": "25",
+    "name": "Odd Numbers",
+    "summary": "Print the odd numbers from 1 to 99.",
+    "category": "easy"
+  },
+  {
+    "id": "26",
+    "name": "File Size",
+    "summary": "Print the file size in bytes.",
+    "category": "easy"
+  },
+  {
+    "id": "27",
+    "name": "Decimal To Binary",
+    "summary": "Print the binary representation of a decimal number.",
+    "category": "moderate"
+  },
+  {
+    "id": "28",
+    "name": "String Searching",
+    "summary": "Determine if substring match exists.",
+    "category": "hard"
+  },
+  {
+    "id": "29",
+    "name": "Unique Elements",
+    "summary": "Extract unique list from a sorted list of numbers.",
+    "category": "easy"
+  },
+  {
+    "id": "30",
+    "name": "Set Intersection",
+    "summary": "Print the intersection of two sets of numbers.",
+    "category": "easy"
+  },
+  {
+    "id": "31",
+    "name": "Rightmost Char",
+    "summary": "Print the position of the rightmost occurrence of a char.",
+    "category": "easy"
+  },
+  {
+    "id": "32",
+    "name": "Trailing String",
+    "summary": "Determine if a string 'B' occurs at the end of string 'A'.",
+    "category": "moderate"
+  },
+  {
+    "id": "33",
+    "name": "Double Squares",
+    "summary": "FaceBook Hacker Cup 2011: Output the number of ways to write X as the sum of two squares.",
+    "category": "moderate"
+  },
+  {
+    "id": "34",
+    "name": "Number Pairs",
+    "summary": "Find pairs of numbers in a sorted array whose sum is X.",
+    "category": "moderate"
+  },
+  {
+    "id": "35",
+    "name": "Email Validation",
+    "summary": "Write a regular expression to validate an email address.",
+    "category": "moderate"
+  },
+  {
+    "id": "36",
+    "name": "Message Decoding",
+    "summary": "Decode an encoded message.",
+    "category": "hard"
+  },
+  {
+    "id": "37",
+    "name": "Pangrams",
+    "summary": "Find the missing alphabets.",
+    "category": "moderate"
+  },
+  {
+    "id": "38",
+    "name": "String List",
+    "summary": "Create a new string from constituent alphabets.",
+    "category": "hard"
+  },
+  {
+    "id": "39",
+    "name": "Happy Numbers",
+    "summary": "Determine if a number is a happy number or not.",
+    "category": "easy"
+  },
+  {
+    "id": "40",
+    "name": "Self Describing Numbers",
+    "summary": "Determine if a number is a self-describing number or not.",
+    "category": "easy"
+  },
+  {
+    "id": "41",
+    "name": "Array Absurdity",
+    "summary": "Determine if an array contains a duplicated entry.",
+    "category": "moderate"
+  },
+  {
+    "id": "42",
+    "name": "Ugly Numbers",
+    "summary": "Count the number of expressions that can be created from a number.",
+    "category": "hard"
+  },
+  {
+    "id": "43",
+    "name": "Jolly Jumpers",
+    "summary": "Determine if a sequence of numbers is a Jolly Jumper.",
+    "category": "moderate"
+  },
+  {
+    "id": "44",
+    "name": "Following Integer",
+    "summary": "Determine the next number in a sequence.",
+    "category": "hard"
+  },
+  {
+    "id": "45",
+    "name": "Reverse and Add",
+    "summary": "Continually add a number to its reverse to arrive at a palindrome.",
+    "category": "moderate"
+  },
+  {
+    "id": "46",
+    "name": "Prime Numbers",
+    "summary": "Print prime numbers less than N.",
+    "category": "moderate"
+  },
+  {
+    "id": "47",
+    "name": "Palindromic Ranges",
+    "summary": "Find out a range of palindromic numbers.",
+    "category": "hard"
+  },
+  {
+    "id": "48",
+    "name": "Discount Offers",
+    "summary": "Determine optimal pairing of customers with products.",
+    "category": "hard"
+  },
+  {
+    "id": "49",
+    "name": "Peak Traffic",
+    "summary": "Finding out which friends you interact with most.",
+    "category": "hard"
+  },
+  {
+    "id": "50",
+    "name": "String Substitution",
+    "summary": "Create a new string by replacing substrings within it.",
+    "category": "hard"
+  },
+  {
+    "id": "51",
+    "name": "Closest Pair",
+    "summary": "Given a set of points in a two dimensional space, you will have to find the distance between the closest two points.",
+    "category": "hard"
+  },
+  {
+    "id": "52",
+    "name": "Text Dollar",
+    "summary": "Print out the text dollar amount of a given quantity.",
+    "category": "hard"
+  },
+  {
+    "id": "53",
+    "name": "Repeated Substring",
+    "summary": "Find the longest repeated substring in a given text.",
+    "category": "hard"
+  },
+  {
+    "id": "54",
+    "name": "Cash Register",
+    "summary": "Determine the amount of change to be returned.",
+    "category": "moderate"
+  },
+  {
+    "id": "55",
+    "name": "Type Ahead",
+    "summary": "Building a type ahead feature.",
+    "category": "hard"
+  },
+  {
+    "id": "56",
+    "name": "Robot Movements",
+    "summary": "Number of ways a robot can reach its destination.",
+    "category": "hard"
+  },
+  {
+    "id": "57",
+    "name": "Spiral Printing",
+    "summary": "Print out a 2D array in spiral order.",
+    "category": "hard"
+  },
+  {
+    "id": "58",
+    "name": "Levenshtein Distance",
+    "summary": "Find out how big the social network of a word is.",
+    "category": "hard"
+  },
+  {
+    "id": "59",
+    "name": "Telephone Words",
+    "summary": "Print out the words corresponding to a telephone number.",
+    "category": "hard"
+  },
+  {
+    "id": "60",
+    "name": "Grid Walk",
+    "summary": "The number of grid points that can be accessed.",
+    "category": "hard"
+  },
+  {
+    "id": "61",
+    "name": "Decryption",
+    "summary": "Determine the plain text message from an encrypted string.",
+    "category": "hard"
+  },
+  {
+    "id": "62",
+    "name": "N Mod M",
+    "summary": "Determine the modulus (without the modulus operator).",
+    "category": "easy"
+  },
+  {
+    "id": "63",
+    "name": "Counting Primes",
+    "summary": "Count the number of primes between two integers.",
+    "category": "moderate"
+  },
+  {
+    "id": "64",
+    "name": "Climbing Stairs",
+    "summary": "Count the number of ways to climb to the top of a staircase.",
+    "category": "hard"
+  },
+  {
+    "id": "65",
+    "name": "Word Search",
+    "summary": "Find if a word exists in a grid.",
+    "category": "hard"
+  },
+  {
+    "id": "66",
+    "name": "Pascals Triangle",
+    "summary": "Print out pascals triangle upto a certain depth.",
+    "category": "moderate"
+  },
+  {
+    "id": "67",
+    "name": "Hex to Decimal",
+    "summary": "Convert a hex number to it's decimal equivalent.",
+    "category": "easy"
+  },
+  {
+    "id": "68",
+    "name": "Valid parentheses",
+    "summary": "Determine if string is a well-formed parentheses.",
+    "category": "moderate"
+  },
+  {
+    "id": "69",
+    "name": "Distinct Subsequences",
+    "summary": "Determine the number of distinct subsequnces within a string.",
+    "category": "hard"
+  },
+  {
+    "id": "70",
+    "name": "Overlapping Rectangles",
+    "summary": "Determine if two rectangles overlap.",
+    "category": "moderate"
+  },
+  {
+    "id": "71",
+    "name": "Reverse Groups",
+    "summary": "Reverse elements in a list k items at a time.",
+    "category": "moderate"
+  },
+  {
+    "id": "72",
+    "name": "Minimum Path Sum",
+    "summary": "Calculate the minimum sum of a path through a matrix.",
+    "category": "hard"
+  },
+  {
+    "id": "73",
+    "name": "Decode Numbers",
+    "summary": "Count the number of ways to decode a string.",
+    "category": "moderate"
+  },
+  {
+    "id": "74",
+    "name": "Minimum Coins",
+    "summary": "Find the minimum number of coins to arrive at a total.",
+    "category": "moderate"
+  },
+  {
+    "id": "75",
+    "name": "Flavius Josephus",
+    "summary": "Eliminate every i'th item from a circular list.",
+    "category": "moderate"
+  },
+  {
+    "id": "76",
+    "name": "String Rotation",
+    "summary": "Find if a string is the rotation of another string.",
+    "category": "moderate"
+  },
+  {
+    "id": "77",
+    "name": "Da Vyncy",
+    "summary": "Recreate a document from a set of fragments.",
+    "category": "hard"
+  },
+  {
+    "id": "78",
+    "name": "Sudoku",
+    "summary": "Determine if a grid layout is a valid sudoku solution.",
+    "category": "moderate"
+  },
+  {
+    "id": "79",
+    "name": "Minesweeper",
+    "summary": "Find the mines within a M*N matrix.",
+    "category": "hard"
+  },
+  {
+    "id": "80",
+    "name": "URI Comparison",
+    "summary": "Determine if two URIs match.",
+    "category": "moderate"
+  },
+  {
+    "id": "81",
+    "name": "Sum to Zero",
+    "summary": "Count of ways in which the sum of four numbers is zero.",
+    "category": "moderate"
+  },
+  {
+    "id": "82",
+    "name": "Armstrong Numbers",
+    "summary": "Determine if a number is an armstrong number.",
+    "category": "easy"
+  },
+  {
+    "id": "83",
+    "name": "Beautiful Strings",
+    "summary": "Facebook Hacker Cup 2013 problem.",
+    "category": "easy"
+  },
+  {
+    "id": "84",
+    "name": "Balanced Smileys",
+    "summary": "Facebook Hacker Cup 2013 problem.",
+    "category": "moderate"
+  },
+  {
+    "id": "85",
+    "name": "Find Min",
+    "summary": "Facebook Hacker Cup 2013 problem.",
+    "category": "hard"
+  },
+  {
+    "id": "86",
+    "name": "Poker hands",
+    "summary": "Compare two poker hands.",
+    "category": "hard"
+  },
+  {
+    "id": "87",
+    "name": "Query Board",
+    "summary": "Set and get values from a matrix using tiny DSL.",
+    "category": "easy"
+  },
+  {
+    "id": "88",
+    "name": "Juggle Fest",
+    "summary": "A challenge from Yodle.",
+    "category": "hard"
+  },
+  {
+    "id": "89",
+    "name": "Pass Triangle",
+    "summary": "Lead the way within the triangle.",
+    "category": "moderate"
+  },
+  {
+    "id": "90",
+    "name": "Commuting Engineer",
+    "summary": "Travelling Salesman Problem.",
+    "category": "hard"
+  },
+  {
+    "id": "91",
+    "name": "Simple Sorting",
+    "summary": "Sort several numbers.",
+    "category": "easy"
+  },
+  {
+    "id": "92",
+    "name": "Penultimate Word",
+    "summary": "Find the next-to-last word.",
+    "category": "easy"
+  },
+  {
+    "id": "93",
+    "name": "Capitalize Words",
+    "summary": "Capitalize words in a sentence.",
+    "category": "easy"
+  },
+  {
+    "id": "94",
+    "name": "Simple Calculator",
+    "summary": "Create a simple calculator.",
+    "category": "moderate"
+  },
+  {
+    "id": "95",
+    "name": "Advanced Calculator",
+    "summary": "Create an advanced calculator.",
+    "category": "hard"
+  },
+  {
+    "id": "96",
+    "name": "Swap Case",
+    "summary": "Swap case in a string.",
+    "category": "easy"
+  },
+  {
+    "id": "97",
+    "name": "Find a Writer",
+    "summary": "Find a famous writer in a string.",
+    "category": "easy"
+  },
+  {
+    "id": "98",
+    "name": "Point in Circle",
+    "summary": "Define whether a point is in a circle.",
+    "category": "moderate"
+  },
+  {
+    "id": "99",
+    "name": "Calculate Distance",
+    "summary": "Calculate a distance between two points.",
+    "category": "easy"
+  },
+  {
+    "id": "100",
+    "name": "Even Numbers",
+    "summary": "Determine if a number is even or not.",
+    "category": "easy"
+  },
+  {
+    "id": "101",
+    "name": "Find a Square",
+    "summary": "Do 4 points make a square?",
+    "category": "moderate"
+  },
+  {
+    "id": "102",
+    "name": "JSON menu IDs",
+    "summary": "Calculate IDs in JSON menu.",
+    "category": "easy"
+  },
+  {
+    "id": "103",
+    "name": "Lowest Unique Number",
+    "summary": "Find the lowest unique number in a set.",
+    "category": "easy"
+  },
+  {
+    "id": "104",
+    "name": "Word to Digit",
+    "summary": "Substitute words to digits.",
+    "category": "easy"
+  },
+  {
+    "id": "105",
+    "name": "Largest Sub-Matrix",
+    "summary": "Determine the largest sub-matrix in a matrix.",
+    "category": "hard"
+  },
+  {
+    "id": "106",
+    "name": "Roman Numerals",
+    "summary": "Convert a cardinal number to a Roman numeral.",
+    "category": "easy"
+  },
+  {
+    "id": "107",
+    "name": "Shortest Repetition",
+    "summary": "Find the shortest repetition in a string.",
+    "category": "easy"
+  },
+  {
+    "id": "108",
+    "name": "Computer Terminal",
+    "summary": "Print text to terminal with control sequences.",
+    "category": "hard"
+  },
+  {
+    "id": "109",
+    "name": "Bay Bridges",
+    "summary": "Build Bridges Over San Francisco Bay.",
+    "category": "hard"
+  },
+  {
+    "id": "110",
+    "name": "Text to Number",
+    "summary": "Convert English text representation of a number to a decimal number.",
+    "category": "hard"
+  },
+  {
+    "id": "111",
+    "name": "Longest Word",
+    "summary": "Get the longest word in a sentence.",
+    "category": "easy"
+  },
+  {
+    "id": "112",
+    "name": "Swap Elements",
+    "summary": "Swap elements in a list.",
+    "category": "easy"
+  },
+  {
+    "id": "113",
+    "name": "Multiply Lists",
+    "summary": "Multiply elements in 2 lists.",
+    "category": "easy"
+  },
+  {
+    "id": "114",
+    "name": "Package Problem",
+    "summary": "Put as many things into a package as possible.",
+    "category": "hard"
+  },
+  {
+    "id": "115",
+    "name": "Mixed Content",
+    "summary": "Separate words with digits.",
+    "category": "easy"
+  },
+  {
+    "id": "116",
+    "name": "Morse Code",
+    "summary": "Decode Morse code.",
+    "category": "easy"
+  },
+  {
+    "id": "117",
+    "name": "A Pile of Bricks",
+    "summary": "Close a hole in a wall.",
+    "category": "moderate"
+  },
+  {
+    "id": "118",
+    "name": "Seat your team members",
+    "summary": "Place the employees in a new office.",
+    "category": "hard"
+  },
+  {
+    "id": "119",
+    "name": "Chain Inspection",
+    "summary": "Try to pass a chain.",
+    "category": "moderate"
+  },
+  {
+    "id": "120",
+    "name": "Skyscrapers",
+    "summary": "Outline skyscrapers in a city.",
+    "category": "hard"
+  },
+  {
+    "id": "121",
+    "name": "Lost In Translation",
+    "summary": "Try to become a native speaker.",
+    "category": "moderate"
+  },
+  {
+    "id": "122",
+    "name": "Hidden Digits",
+    "summary": "Try to look behind the scenes.",
+    "category": "easy"
+  },
+  {
+    "id": "123",
+    "name": "Efficient Delivery",
+    "summary": "Load your tankers with oil.",
+    "category": "hard"
+  },
+  {
+    "id": "124",
+    "name": "Road Trip",
+    "summary": "Do not be left without petrol.",
+    "category": "easy"
+  },
+  {
+    "id": "125",
+    "name": "Predict the Number",
+    "summary": "Try to go beyond the limits.",
+    "category": "moderate"
+  },
+  {
+    "id": "126",
+    "name": "Play with DNA",
+    "summary": "Write an algorithm that a finds DNA segment in a given DNA string.",
+    "category": "hard"
+  },
+  {
+    "id": "127",
+    "name": "Code Plagiarism",
+    "summary": "Compare source code of two programs.",
+    "category": "hard"
+  },
+  {
+    "id": "128",
+    "name": "Compressed Sequence",
+    "summary": "Write a program that compresses a sequence of numbers.",
+    "category": "easy"
+  },
+  {
+    "id": "129",
+    "name": "Routing Problem",
+    "summary": "Find all the shortest paths for the package between two specified hosts.",
+    "category": "hard"
+  },
+  {
+    "id": "130",
+    "name": "Sequence Transformation",
+    "summary": "Transform a binary sequence into a string.",
+    "category": "moderate"
+  },
+  {
+    "id": "131",
+    "name": "Split The Number",
+    "summary": "Evaluate the number according to the pattern.",
+    "category": "easy"
+  },
+  {
+    "id": "132",
+    "name": "The Major Element",
+    "summary": "Find the major element in a sequence.",
+    "category": "easy"
+  },
+  {
+    "id": "133",
+    "name": "City Blocks Flyover",
+    "summary": "Chart the path of a helicopter from above to discover how many city blocks it flew over.",
+    "category": "moderate"
+  },
+  {
+    "id": "134",
+    "name": "A bus network",
+    "summary": "Try to save more time.",
+    "category": "hard"
+  },
+  {
+    "id": "135",
+    "name": "Word chain",
+    "summary": "Find the longest chain of words.",
+    "category": "moderate"
+  },
+  {
+    "id": "136",
+    "name": "Racing Chars",
+    "summary": "Explore a race track avoiding crashes.",
+    "category": "easy"
+  },
+  {
+    "id": "137",
+    "name": "Seek for an Intruder",
+    "summary": "Find the IP address of an intruder.",
+    "category": "moderate"
+  },
+  {
+    "id": "138",
+    "name": "Car Race",
+    "summary": "Determine the fastest car.",
+    "category": "moderate"
+  },
+  {
+    "id": "139",
+    "name": "Working experience",
+    "summary": "Retrieve an actual value.",
+    "category": "easy"
+  },
+  {
+    "id": "140",
+    "name": "Data Recovery",
+    "summary": "Reconstruct a sentence using hints.",
+    "category": "easy"
+  },
+  {
+    "id": "141",
+    "name": "Flight 370",
+    "summary": "Follow the current search results.",
+    "category": "hard"
+  },
+  {
+    "id": "142",
+    "name": "Visit to the Headquarters",
+    "summary": "Organize the queues.",
+    "category": "hard"
+  },
+  {
+    "id": "143",
+    "name": "The Ministry of Truth",
+    "summary": "Your task is to help the Big Brother.",
+    "category": "moderate"
+  },
+  {
+    "id": "144",
+    "name": "Digit statistics",
+    "summary": "Find statistics in sequence.",
+    "category": "hard"
+  },
+  {
+    "id": "145",
+    "name": "Running for president",
+    "summary": "Build your strategy to win the Presidency of the United States.",
+    "category": "hard"
+  },
+  {
+    "id": "146",
+    "name": "Bats Challenge",
+    "summary": "Count bats on the wire.",
+    "category": "moderate"
+  },
+  {
+    "id": "147",
+    "name": "Lettercase Percentage Ratio",
+    "summary": "Find the percentage ratio.",
+    "category": "easy"
+  },
+  {
+    "id": "148",
+    "name": "Color Code Converter",
+    "summary": "Determine and convert the color code.",
+    "category": "moderate"
+  },
+  {
+    "id": "149",
+    "name": "Juggling With Zeros",
+    "summary": "Convert a zero-based number into integer.",
+    "category": "easy"
+  },
+  {
+    "id": "150",
+    "name": "Roman and Arabic",
+    "summary": "Calculate aromatic numbers.",
+    "category": "moderate"
+  },
+  {
+    "id": "151",
+    "name": "Cracking eggs",
+    "summary": "Determine the number of drops.",
+    "category": "hard"
+  },
+  {
+    "id": "152",
+    "name": "Age distribution",
+    "summary": "Print out where the person is.",
+    "category": "easy"
+  },
+  {
+    "id": "153",
+    "name": "Locks",
+    "summary": "Calculate unlocked doors.",
+    "category": "moderate"
+  },
+  {
+    "id": "154",
+    "name": "IP package",
+    "summary": "Calculate IP checksum.",
+    "category": "hard"
+  },
+  {
+    "id": "155",
+    "name": "ASCII Decryption",
+    "summary": "Decrypt a message.",
+    "category": "hard"
+  },
+  {
+    "id": "156",
+    "name": "Roller Coaster",
+    "summary": "Turn the text into RoLlErCoAsTeR case.",
+    "category": "easy"
+  },
+  {
+    "id": "157",
+    "name": "The Labyrinth",
+    "summary": "Find the shortest way to exit.",
+    "category": "hard"
+  },
+  {
+    "id": "158",
+    "name": "Interrupted Bubble Sort",
+    "summary": "Sort a list of elements. Partially.",
+    "category": "moderate"
+  },
+  {
+    "id": "159",
+    "name": "Where is Wi-Fi",
+    "summary": "Find out in which buildings there are hotspots.",
+    "category": "hard"
+  },
+  {
+    "id": "160",
+    "name": "Nice angles",
+    "summary": "Convert angle values to sexagesimal format.",
+    "category": "easy"
+  },
+  {
+    "id": "161",
+    "name": "Game of Life",
+    "summary": "Implement the classical cellular automaton game.",
+    "category": "moderate"
+  },
+  {
+    "id": "162",
+    "name": "Too unique",
+    "summary": "Find and mark the biggest submatrices of unique elements.",
+    "category": "hard"
+  },
+  {
+    "id": "163",
+    "name": "Big Digits",
+    "summary": "Print out magnified digits using pseudographics.",
+    "category": "easy"
+  },
+  {
+    "id": "164",
+    "name": "Mars Networks",
+    "summary": "Find the minimum length of the optical fiber cable which connects probes to a network.",
+    "category": "hard"
+  },
+  {
+    "id": "165",
+    "name": "Suggest Groups",
+    "summary": "Help your friends to join groups.",
+    "category": "moderate"
+  },
+  {
+    "id": "166",
+    "name": "Delta Time",
+    "summary": "Find the time difference.",
+    "category": "easy"
+  },
+  {
+    "id": "167",
+    "name": "Read More",
+    "summary": "Limit the length of the text.",
+    "category": "easy"
+  },
+  {
+    "id": "168",
+    "name": "The Frequency",
+    "summary": "Find the signals frequency.",
+    "category": "hard"
+  },
+  {
+    "id": "169",
+    "name": "Filename Pattern",
+    "summary": "Filter a list of filenames.",
+    "category": "moderate"
+  },
+  {
+    "id": "170",
+    "name": "Guess the Number",
+    "summary": "Guess the number in log2(N) steps.",
+    "category": "moderate"
+  },
+  {
+    "id": "171",
+    "name": "DNA Alignment",
+    "summary": "Find the highest score of DNA sequences alignment.",
+    "category": "hard"
+  },
+  {
+    "id": "172",
+    "name": "Card number validation",
+    "summary": "Check if bank card numbers are valid.",
+    "category": "moderate"
+  },
+  {
+    "id": "173",
+    "name": "Without Repetitions",
+    "summary": "Delete characters that are consistently repeated.",
+    "category": "easy"
+  },
+  {
+    "id": "174",
+    "name": "Slang Flavor",
+    "summary": "Add some slang to the text.",
+    "category": "easy"
+  },
+  {
+    "id": "175",
+    "name": "The Cubes",
+    "summary": "Find the length of the shortest way in the multilevel labyrinth.",
+    "category": "hard"
+  },
+  {
+    "id": "176",
+    "name": "Ray of Light",
+    "summary": "Trace the path of light distribution.",
+    "category": "hard"
+  },
+  {
+    "id": "177",
+    "name": "Justify the Text",
+    "summary": "Align the text to the specified width.",
+    "category": "moderate"
+  },
+  {
+    "id": "178",
+    "name": "Matrix Rotation",
+    "summary": "Rotate a 2D matrix 90 degrees clockwise.",
+    "category": "easy"
+  },
+  {
+    "id": "179",
+    "name": "Broken LCD",
+    "summary": "Determine whether a given number can be displayed on the damaged LCD.",
+    "category": "moderate"
+  },
+  {
+    "id": "180",
+    "name": "Knight Moves",
+    "summary": "Find positions for the next move of the knight.",
+    "category": "easy"
+  },
+  {
+    "id": "181",
+    "name": "Gronsfeld cipher",
+    "summary": "Decipher the message enciphered with the Gronsfeld cipher.",
+    "category": "moderate"
+  },
+  {
+    "id": "182",
+    "name": "Longest Path",
+    "summary": "Find the longest path of unique elements.",
+    "category": "hard"
+  },
+  {
+    "id": "183",
+    "name": "Details",
+    "summary": "Determine how many cells will be shifted detail.",
+    "category": "easy"
+  },
+  {
+    "id": "184",
+    "name": "Burrows-Wheeler transform",
+    "summary": "Complete file decompression by inverting BWT.",
+    "category": "moderate"
+  },
+  {
+    "id": "185",
+    "name": "Glue Shredded Pieces",
+    "summary": "Reconstruct the original text from overlapping pieces.",
+    "category": "hard"
+  },
+  {
+    "id": "186",
+    "name": "Max Range Sum",
+    "summary": "Determine max sum at the range.",
+    "category": "easy"
+  },
+  {
+    "id": "187",
+    "name": "Consecutive Primes",
+    "summary": "Determine how many ways the numbers can be arranged such that every consecutive pair sums to a prime.",
+    "category": "moderate"
+  },
+  {
+    "id": "188",
+    "name": "Distinct Triangles",
+    "summary": "Find the number of distinct triangles formed in a graph.",
+    "category": "hard"
+  },
+  {
+    "id": "189",
+    "name": "Minimum Distance",
+    "summary": "Find a point with the smallest sum of distances to every given point.",
+    "category": "easy"
+  },
+  {
+    "id": "190",
+    "name": "Number Operations",
+    "summary": "Determine if it is possible to produce the number 42 with five cards.",
+    "category": "moderate"
+  },
+  {
+    "id": "191",
+    "name": "Lights Out",
+    "summary": "Switch all the lights off with minimum number of moves.",
+    "category": "hard"
+  },
+  {
+    "id": "192",
+    "name": "Compare Points",
+    "summary": "Given two (x, y) points A and B, determine which cardinal direction B is from A.",
+    "category": "easy"
+  },
+  {
+    "id": "193",
+    "name": "Magic Numbers",
+    "summary": "Print out a list of all the magic numbers in a provided range.",
+    "category": "moderate"
+  },
+  {
+    "id": "194",
+    "name": "Twenty Forty Eight",
+    "summary": "Implement the 2048 game logic.",
+    "category": "moderate"
+  },
+  {
+    "id": "195",
+    "name": "Crime House",
+    "summary": "Count criminals in the Crime House.",
+    "category": "hard"
+  },
+  {
+    "id": "196",
+    "name": "Swap Numbers",
+    "summary": "Swap numbers surrounding a word.",
+    "category": "easy"
+  },
+  {
+    "id": "197",
+    "name": "Column Names",
+    "summary": "Convert integer to excel-style column name.",
+    "category": "moderate"
+  },
+  {
+    "id": "198",
+    "name": "Less Money, More Problems",
+    "summary": "Help citizens by adding new coin denominations.",
+    "category": "hard"
+  },
+  {
+    "id": "199",
+    "name": "String mask",
+    "summary": "Change case letters by mask.",
+    "category": "easy"
+  },
+  {
+    "id": "200",
+    "name": "Sort matrix columns",
+    "summary": "Sort matrix columns from lowest to highest numbers.",
+    "category": "moderate"
+  },
+  {
+    "id": "201",
+    "name": "Alphabet blocks",
+    "summary": "Forming words from alphabet blocks.",
+    "category": "hard"
+  },
+  {
+    "id": "202",
+    "name": "Stepwise word",
+    "summary": "Print the longest word in a stepwise manner.",
+    "category": "easy"
+  },
+  {
+    "id": "203",
+    "name": "Strings and arrows",
+    "summary": "Print the number of arrows in a string.",
+    "category": "easy"
+  },
+  {
+    "id": "204",
+    "name": "Straight lines",
+    "summary": "Print the number of straight lines.",
+    "category": "hard"
+  },
+  {
+    "id": "205",
+    "name": "Clean up the words",
+    "summary": "Print the words separated by spaces.",
+    "category": "easy"
+  },
+  {
+    "id": "206",
+    "name": "Lucky tickets",
+    "summary": "Count the lucky tickets.",
+    "category": "moderate"
+  },
+  {
+    "id": "207",
+    "name": "Which way is faster?",
+    "summary": "Find the fastest way.",
+    "category": "hard"
+  },
+  {
+    "id": "208",
+    "name": "Find the highest score",
+    "summary": "Find the highest rate in the table.",
+    "category": "easy"
+  },
+  {
+    "id": "209",
+    "name": "Black or white",
+    "summary": "Find the smallest submatrix.",
+    "category": "moderate"
+  },
+  {
+    "id": "210",
+    "name": "Brainf*ck",
+    "summary": "Blow your mind.",
+    "category": "hard"
+  },
+  {
+    "id": "211",
+    "name": "Chardonnay or Cabernet",
+    "summary": "Guess a wine name.",
+    "category": "easy"
+  },
+  {
+    "id": "212",
+    "name": "Robo and Robitta",
+    "summary": "Count all nuts.",
+    "category": "moderate"
+  },
+  {
+    "id": "213",
+    "name": "Lakes, not cakes",
+    "summary": "Count all lakes.",
+    "category": "hard"
+  },
+  {
+    "id": "214",
+    "name": "Time to eat",
+    "summary": "Sort timestamps in the right order.",
+    "category": "easy"
+  },
+  {
+    "id": "215",
+    "name": "Double trouble",
+    "summary": "Calculate the number of correct variants for messages.",
+    "category": "moderate"
+  },
+  {
+    "id": "216",
+    "name": "Everything or nothing",
+    "summary": "Check if a code is correct.",
+    "category": "hard"
+  },
+  {
+    "id": "217",
+    "name": "One zero, two zeros...",
+    "summary": "Count zeros in a binary system.",
+    "category": "easy"
+  },
+  {
+    "id": "218",
+    "name": "Builders team.",
+    "summary": "Count all squares on the map.",
+    "category": "moderate"
+  },
+  {
+    "id": "219",
+    "name": "The Tourist",
+    "summary": "Find the shortest route between cities.",
+    "category": "hard"
+  },
+  {
+    "id": "220",
+    "name": "Trick or Treat",
+    "summary": "Count all candies.",
+    "category": "easy"
+  },
+  {
+    "id": "221",
+    "name": "Organizational Hierarchy",
+    "summary": "Recreate the hierarchy tree.",
+    "category": "moderate"
+  },
+  {
+    "id": "222",
+    "name": "Black card",
+    "summary": "Find the winner.",
+    "category": "easy"
+  },
+  {
+    "id": "223",
+    "name": "Alternative reality",
+    "summary": "Count all alternative ways.",
+    "category": "moderate"
+  },
+  {
+    "id": "224",
+    "name": "Prisoner or Citizen",
+    "summary": "In jail or at large?",
+    "category": "hard"
+  },
+  {
+    "id": "225",
+    "name": "Testing",
+    "summary": "Wanna try to be a tester?",
+    "category": "easy"
+  },
+  {
+    "id": "226",
+    "name": "Try to solve it",
+    "summary": "How good decoder are you?",
+    "category": "moderate"
+  },
+  {
+    "id": "227",
+    "name": "Real fake",
+    "summary": "Check credit card numbers.",
+    "category": "easy"
+  },
+  {
+    "id": "228",
+    "name": "To PI or not to PI",
+    "summary": "Print a PI number.",
+    "category": "moderate"
+  },
+  {
+    "id": "229",
+    "name": "Grinch",
+    "summary": "Help Grinch to find the shortest way.",
+    "category": "hard"
+  },
+  {
+    "id": "230",
+    "name": "Football",
+    "summary": "Find countries that are football fans.",
+    "category": "easy"
+  },
+  {
+    "id": "231",
+    "name": "Meet Cocktail sort",
+    "summary": "Learn more about cocktail sort algorithm.",
+    "category": "moderate"
+  },
+  {
+    "id": "232",
+    "name": "Not so clever",
+    "summary": "Simplicity is not always good.",
+    "category": "easy"
+  },
+  {
+    "id": "233",
+    "name": "Meet Comb sort",
+    "summary": "Learn more about the comb sort algorithm.",
+    "category": "moderate"
+  },
+  {
+    "id": "234",
+    "name": "Code like Huffman",
+    "summary": "Learn more about Huffman's tree.",
+    "category": "hard"
+  },
+  {
+    "id": "235",
+    "name": "Simple or trump",
+    "summary": "Check which card is higher.",
+    "category": "easy"
+  },
+  {
+    "id": "236",
+    "name": "Beat or bit",
+    "summary": "Learn more about the Gray code algorithm.",
+    "category": "moderate"
+  },
+  {
+    "id": "237",
+    "name": "Panacea - truth or lie",
+    "summary": "Check whether the virus was stopped by antivirus.",
+    "category": "easy"
+  },
+  {
+    "id": "238",
+    "name": "Code combinations",
+    "summary": "Check whether you can make words from the given letters.",
+    "category": "moderate"
+  },
+  {
+    "id": "239",
+    "name": "As quick as a flash",
+    "summary": "Learn more about the quick sort algorithm.",
+    "category": "hard"
+  },
+  {
+    "id": "240",
+    "name": "Mersenne prime",
+    "summary": "Find all Mersenne numbers smaller than n.",
+    "category": "easy"
+  }
+]

@@ -1,0 +1,5 @@
+problemId: 17
+name: Sum of Integers
+category: Moderate
+summary: Determine the largest sum of contiguous integers in an array.
+url: "https://www.codeeval.com/browse/17/"

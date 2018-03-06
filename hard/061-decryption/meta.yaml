@@ -1,0 +1,5 @@
+problemId: 61
+name: Decryption
+category: Hard
+summary: Determine the plain text message from an encrypted string.
+url: "https://www.codeeval.com/browse/61/"

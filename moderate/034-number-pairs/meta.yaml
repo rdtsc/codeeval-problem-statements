@@ -1,0 +1,5 @@
+problemId: 34
+name: Number Pairs
+category: Moderate
+summary: Find pairs of numbers in a sorted array whose sum is X.
+url: "https://www.codeeval.com/browse/34/"

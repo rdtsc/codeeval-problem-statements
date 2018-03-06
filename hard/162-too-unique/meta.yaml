@@ -1,0 +1,5 @@
+problemId: 162
+name: Too Unique
+category: Hard
+summary: Find and mark the biggest submatrices of unique elements.
+url: "https://www.codeeval.com/browse/162/"

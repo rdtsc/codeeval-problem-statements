@@ -1,0 +1,5 @@
+problemId: 78
+name: Sudoku
+category: Moderate
+summary: Determine if a grid layout is a valid sudoku solution.
+url: "https://www.codeeval.com/browse/78/"

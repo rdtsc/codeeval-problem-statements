@@ -1,0 +1,5 @@
+problemId: 240
+name: Mersenne Prime
+category: Easy
+summary: Find all Mersenne numbers smaller than n.
+url: "https://www.codeeval.com/browse/240/"

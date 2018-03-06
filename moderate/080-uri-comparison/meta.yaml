@@ -1,0 +1,5 @@
+problemId: 80
+name: URI Comparison
+category: Moderate
+summary: Determine if two URIs match.
+url: "https://www.codeeval.com/browse/80/"

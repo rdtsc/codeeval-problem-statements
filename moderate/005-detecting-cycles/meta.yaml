@@ -1,0 +1,5 @@
+problemId: 5
+name: Detecting Cycles
+category: Moderate
+summary: Detecting loops within a sequence.
+url: "https://www.codeeval.com/browse/5/"

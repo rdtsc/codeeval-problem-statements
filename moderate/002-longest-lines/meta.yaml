@@ -1,0 +1,5 @@
+problemId: 2
+name: Longest Lines
+category: Moderate
+summary: "Finding the 'N' longest lines within a file."
+url: "https://www.codeeval.com/browse/2/"

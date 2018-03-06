@@ -1,0 +1,5 @@
+problemId: 31
+name: Rightmost Char
+category: Easy
+summary: Print the position of the rightmost occurrence of a char.
+url: "https://www.codeeval.com/browse/31/"

@@ -1,0 +1,5 @@
+problemId: 184
+name: Burrows-Wheeler Transform
+category: Moderate
+summary: Complete file decompression by inverting BWT.
+url: "https://www.codeeval.com/browse/184/"

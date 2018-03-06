@@ -1,0 +1,5 @@
+problemId: 69
+name: Distinct Subsequences
+category: Hard
+summary: Determine the number of distinct subsequnces within a string.
+url: "https://www.codeeval.com/browse/69/"

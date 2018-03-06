@@ -1,0 +1,5 @@
+problemId: 192
+name: Compare Points
+category: Easy
+summary: "Given two (x, y) points A and B, determine which cardinal direction B is from A."
+url: "https://www.codeeval.com/browse/192/"

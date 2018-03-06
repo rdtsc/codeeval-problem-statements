@@ -1,0 +1,5 @@
+problemId: 35
+name: Email Validation
+category: Moderate
+summary: Write a regular expression to validate an email address.
+url: "https://www.codeeval.com/browse/35/"

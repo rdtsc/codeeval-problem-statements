@@ -1,0 +1,5 @@
+problemId: 87
+name: Query Board
+category: Easy
+summary: Set and get values from a matrix using tiny DSL.
+url: "https://www.codeeval.com/browse/87/"

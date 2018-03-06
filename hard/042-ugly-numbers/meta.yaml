@@ -1,0 +1,5 @@
+problemId: 42
+name: Ugly Numbers
+category: Hard
+summary: Count the number of expressions that can be created from a number.
+url: "https://www.codeeval.com/browse/42/"

@@ -1,0 +1,5 @@
+problemId: 170
+name: Guess the Number
+category: Moderate
+summary: Guess the number in log2(N) steps.
+url: "https://www.codeeval.com/browse/170/"

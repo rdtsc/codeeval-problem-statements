@@ -1,0 +1,3 @@
+4 10 ...OOOOOOO|.OO.O.O...|.OO..OO.OO|...O....O.
+3 3 ..O|OOO|OOO
+5 7 .O.O...|..O.O..|.O.O..O|.O..OOO|OO.OOOO

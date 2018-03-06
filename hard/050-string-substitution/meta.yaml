@@ -1,0 +1,5 @@
+problemId: 50
+name: String Substitution
+category: Hard
+summary: Create a new string by replacing substrings within it.
+url: "https://www.codeeval.com/browse/50/"

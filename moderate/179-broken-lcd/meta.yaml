@@ -1,0 +1,5 @@
+problemId: 179
+name: Broken LCD
+category: Moderate
+summary: Determine whether a given number can be displayed on the damaged LCD.
+url: https://www.codeeval.com/browse/179/

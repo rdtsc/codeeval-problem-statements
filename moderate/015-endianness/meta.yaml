@@ -1,0 +1,5 @@
+problemId: 15
+name: Endianness
+category: Moderate
+summary: Determine the endianness of a system.
+url: https://www.codeeval.com/browse/15/
