@@ -17,7 +17,7 @@
 
 <br>
 
-    On the first diagram the buildings are represented by the following triples:
+On the first diagram the buildings are represented by the following triples:
 </p>
 <pre>(1,2,3); (2,4,6); (4,5,5); (7,3,11); (9,2,14); (13,7,15); (14,3,17)</pre>
 <p>
