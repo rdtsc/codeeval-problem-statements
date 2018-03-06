@@ -6,7 +6,6 @@
     We have just received an extremely important information that needs to be sorted. The amount of information
     is huge, and we need to sort it as soon as possible. That is why we decided to use a quick sort algorithm.
 </p>
-<br>
 
 <h3>Input sample:</h3>
 
