@@ -10,6 +10,10 @@
 </p>
 
 <p>
+    <img src="assets/fig-1.png" alt="Figure 1">
+</p>
+
+<p>
     Your task is to find the frequency of each signal.
 
 </p><h3>Input sample:</h3>

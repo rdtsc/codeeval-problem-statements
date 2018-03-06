@@ -13,6 +13,10 @@ You need to replace the IP source and destination IP address to the new addresse
 This means you should calculate checksum of IP header.
 </p>
 
+<p>
+    <img src="assets/fig-1.png" alt="Figure 1">
+</p>
+
 <h3>Input sample:</h3>
 <p>
 Your program should accept as its first argument a path to a filename.

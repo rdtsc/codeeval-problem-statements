@@ -12,6 +12,10 @@
 <p>For example:</p>
 
 <p>
+    <img src="assets/fig-1.png" alt="Figure 1">
+</p>
+
+<p>
     N is 2 in this graph.
 </p>
 

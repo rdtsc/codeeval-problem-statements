@@ -10,6 +10,10 @@
     we can create two lines.
 </p>
 
+<p>
+    <img src="assets/fig-1.png" alt="Figure 1">
+</p>
+
 <h3>Input sample:</h3>
 
 <p>

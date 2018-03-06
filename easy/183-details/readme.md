@@ -10,7 +10,15 @@
 <p>For example:</p>
 
 <p>
+    <img src="assets/fig-1.png" alt="Figure 1">
+</p>
+
+<p>
     Also, the details may have cavities (or other complex structures). Please see example below (the detail Y is one detail):
+</p>
+
+<p>
+  <img src="assets/fig-2.png" alt="Figure 2">
 </p>
 
 <p>

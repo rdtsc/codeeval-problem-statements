@@ -16,6 +16,10 @@
 </p>
 
 <p>
+    <img src="assets/fig-1.png" alt="Figure 1">
+</p>
+
+<p>
 <small>Picture from the <a target="blank" href="http://gabrielecirulli.github.io/2048/">original game</a> (by Gabriele Cirulli)</small>
 </p>
 

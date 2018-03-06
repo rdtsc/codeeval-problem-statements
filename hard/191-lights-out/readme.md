@@ -22,6 +22,10 @@
 </p>
 
 <p>
+    <img src="assets/fig-1.png" alt="Figure 1">
+</p>
+
+<p>
     toggle lights as follows: row 1, column 4; row 2, column 3; row 2, column 4; and row 3, column 4
 </p>
 

@@ -28,6 +28,10 @@
 </p>
 
 <p>
+    <img src="assets/fig-1.png" alt="Figure 1">
+</p>
+
+<p>
     So the answer is 2.
 </p>
 

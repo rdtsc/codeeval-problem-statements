@@ -14,6 +14,10 @@
     You need to determine and print the highest score of each category in the table.
 </p>
 
+<p>
+    <img src="assets/fig-1.png" alt="Figure 1">
+</p>
+
 <h3>Input sample:</h3>
 
 <p>

@@ -28,6 +28,10 @@
 </p>
 
 <p>
+    <img src="assets/fig-1.png" alt="Figure 1">
+</p>
+
+<p>
     So, write a program that will determine the shortest time for the army to come and help, knowing that you
     have a map, where &apos;S&apos; - Start, &apos;F&apos; - Finish, &apos;P&apos; - 2 ports for a trip by sea.
     Why do you need it? Tripping by sea is the faster way. On the land, you should bypass mountains

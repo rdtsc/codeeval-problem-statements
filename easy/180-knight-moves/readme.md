@@ -9,6 +9,10 @@
 </p>
 
 <p>
+    <img src="assets/fig-1.png" alt="Figure 1">
+</p>
+
+<p>
     Your task is to find all possible positions for the next move of the knight on the empty chessboard.
 </p>
 

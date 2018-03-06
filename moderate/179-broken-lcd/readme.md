@@ -8,12 +8,24 @@
 </p>
 
 <p>
+    <img src="assets/fig-1.png" alt="Figure 1">
+</p>
+
+<p>
     The number in each digit is displayed by turning segments on or off. It can be represented as a binary 8-bit number,
     each bit of which is a segment, ordered in the following binary representation:
 </p>
 
 <p>
+    <img src="assets/fig-2.png" alt="Figure 2">
+</p>
+
+<p>
     For example, number &#x2018;4.&#x2019; (with the decimal mark turned on) corresponds to the following binary representation:
+</p>
+
+<p>
+    <img src="assets/fig-3.png" alt="Figure 3">
 </p>
 
 <p>

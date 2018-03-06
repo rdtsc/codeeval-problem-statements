@@ -24,7 +24,15 @@
 
 <p>For the word &quot;EXALTATION&quot; and the key &quot;31415&quot;, the ciphertext is the following:</p>
 
+<p>
+    <img src="assets/fig-1.png" alt="Figure 1">
+</p>
+
 <p>Accordingly, enciphered message is the following:</p>
+
+<p>
+    <img src="assets/fig-2.png" alt="Figure 2">
+</p>
 
 <pre>HYEMYDUMPS</pre>
 

@@ -7,10 +7,16 @@
     right coordinates of the building and H is the height of the building.
     All buildings are rectangular in shape and they are standing on a very flat surface. E.g.
 <br>
+<br>
+
+    <img src="assets/fig-1.png" alt="Figure 1">
 
 <br>
 
+    <img src="assets/fig-2.png" alt="Figure 2">
+
 <br>
+
     On the first diagram the buildings are represented by the following triples:
 </p>
 <pre>(1,2,3); (2,4,6); (4,5,5); (7,3,11); (9,2,14); (13,7,15); (14,3,17)</pre>
