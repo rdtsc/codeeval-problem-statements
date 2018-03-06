@@ -23,7 +23,7 @@
 0 7 1 5</pre>
 
 <p>
-    You make also check full <a href="http://www.yodlecareers.com/puzzles/triangle.txt">input file</a> which will be
+    You make also check full <a href="assets/triangle.txt">input file</a> which will be
     used for your code evaluation.
 </p>
 
