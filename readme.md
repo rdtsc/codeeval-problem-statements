@@ -5,8 +5,8 @@ writing, the challenge problem statements are no longer publicly accessible.
 This repository mirrors the problem statements for all 239* interactive
 challenges.
 
-<small>* Challenge #127 ("Code Plagiarism") is not included because no points
-were awarded for it by the online judge.</small>
+<sup>* Challenge #127 ("Code Plagiarism") is not included because no points
+were awarded for it by the online judge.</sup>
 
 
 ## Easy (35 points)
