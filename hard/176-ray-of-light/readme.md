@@ -112,5 +112,3 @@
         the cells with prisms.</li>
 <li>There are 40 test cases in the input.</li>
 </ol>
-
-<br>
