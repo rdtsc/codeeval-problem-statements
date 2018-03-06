@@ -70,9 +70,3 @@
 <p>
     (Check points on the map)
 </p>
-
-<p>
-    If you&apos;re able to solve this challenge and interested in Mashey, Flurry,
-    New Relic or Glassdoor, you&apos;ll be able to apply directly after submitting
-    your solution. Let&apos;s see if it cuts down your work commute!
-</p>
