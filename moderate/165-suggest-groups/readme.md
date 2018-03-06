@@ -2,7 +2,7 @@
 
 <h3>Challenge Description:</h3>
 <p>
-    You may have noticed that a new feature was added to our web site &#x2013; <a href="/groups/">user groups</a>. So, this challenge is about joining
+    You may have noticed that a new feature was added to our web site &#x2013; user groups. So, this challenge is about joining
     groups.
 </p>
 <p>
