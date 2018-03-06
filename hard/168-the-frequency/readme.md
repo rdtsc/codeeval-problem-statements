@@ -29,7 +29,7 @@
 59 58 58 58 58 58 57 57 57 56 ... ... 4 5 6 7 7 8 8 8 8 8</pre>
 <br>
 <p>
-    (Some samples were skipped, you can <a href="/static/challenges/frequency.txt">download full example</a>)
+    (Some samples were skipped, you can <a href="input.txt">download full example</a>)
 </p>
 
 <h3>Output sample:</h3>
