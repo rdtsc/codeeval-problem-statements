@@ -3,7 +3,7 @@
 As of 2018-02-12, [CodeEval][ce] has ceased operations. At the time of this
 writing, the challenge problem statements are no longer publicly accessible.
 This repository mirrors the problem statements for all 239* interactive
-challenges.
+challenges that once lived on the platform.
 
 <sup>* Challenge #127 ("Code Plagiarism") is not included because no points
 were awarded for it by the online judge.</sup>
