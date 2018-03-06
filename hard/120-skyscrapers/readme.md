@@ -9,11 +9,11 @@
 <br>
 <br>
 
-    <img src="assets/fig-1.png" alt="Figure 1">
+<img src="assets/fig-1.png" alt="Figure 1">
 
 <br>
 
-    <img src="assets/fig-2.png" alt="Figure 2">
+<img src="assets/fig-2.png" alt="Figure 2">
 
 <br>
 

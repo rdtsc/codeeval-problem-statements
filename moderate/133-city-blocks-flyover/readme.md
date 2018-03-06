@@ -16,7 +16,7 @@
     by a distance D to itself from the helicopter&apos;s starting point. E.g.
 <br>
 
-    <img src="assets/fig-1.png" alt="Figure 1">
+<img src="assets/fig-1.png" alt="Figure 1">
 
 <br>
     On the first diagram the streets and the avenues are represented by the following lists:
