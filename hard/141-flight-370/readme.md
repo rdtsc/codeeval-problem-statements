@@ -8,7 +8,7 @@
     satellite images to explore the Earth and solve the real-world problems. They mark the items they have found with
     the special tags. You can also join the search by going to <a href="http://www.tomnod.com/">http://www.tomnod.com/</a>
     and signing in. All the search results regarding the Malaysian flight are in an XML file that you can download
-<a href="http://d3rj3tz04ush9z.cloudfront.net/results/malaysiaairsar2014_crowdrank.kmz">here</a>. Each item found
+<a href="assets/malaysiaairsar2014_crowdrank.kmz">here</a>. Each item found
     and marked on the map is represented by the following XML section:
 </p>
 <pre class="description-input-output">    &lt;Placemark id=&apos;4889783&apos;&gt;
