@@ -1,11 +1,16 @@
 # CodeEval Problem Statements
 
 As of 2018-02-12, [CodeEval][ce] has ceased operations. This (unofficial)
-repository mirrors the problem statements for all 239* interactive challenges
+repository mirrors* the problem statements for all 239† interactive challenges
 that once lived on the platform.
 
-<sup>* Challenge #127 ("Code Plagiarism") is not included because no points
-were awarded for it by the online evaluation system.</sup>
+<p>
+  <sup>* A couple of problem statements are missing animated GIFs which I don't
+  have a backup of.</sup>
+  <br>
+  <sup>† Challenge #127 ("Code Plagiarism") is not included because no points
+  were awarded for it by the online evaluation system.</sup>
+</p>
 
 
 ## Easy (35 points)
