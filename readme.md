@@ -6,10 +6,12 @@ that once lived on the platform.
 
 <p>
   <sup>* A couple of problem statements are missing animated GIFs which I don't
-  have a backup of.</sup>
+  have a backup of. They were supplementary and are not required to solve the
+  challenges in question.</sup>
   <br>
-  <sup>‡ Challenge #127 ("Code Plagiarism") is not included because no points
-  were awarded for it by the online evaluation system.</sup>
+  <sup>‡ Technically, there were 240 challenges on the platform. Challenge #127
+  ("Code Plagiarism") is not included because it wasn't a graded challenge,
+  and thus no points were awarded for it by the online evaluation system.</sup>
 </p>
 
 
