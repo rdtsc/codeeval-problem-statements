@@ -20,7 +20,7 @@ that once lived on the platform.
   </sup>
 </p>
 
-## Easy (35 points)
+## Easy (35 Points)
 
 | CID            | Name                                   | Synopsis                                                                        |
 | -------------- | -------------------------------------- | ------------------------------------------------------------------------------- |
@@ -108,7 +108,7 @@ that once lived on the platform.
 | [139][cid-139] | [Working Experience][cid-139]          | Retrieve an actual value                                                        |
 
 
-## Moderate (65 points)
+## Moderate (65 Points)
 
 | CID            | Name                                    | Synopsis                                                                                             |
 | -------------- | --------------------------------------- | ---------------------------------------------------------------------------------------------------- |
@@ -195,7 +195,7 @@ that once lived on the platform.
 | [135][cid-135] | [Word Chain][cid-135]                   | Find the longest chain of words                                                                      |
 
 
-## Hard (100 points)
+## Hard (100 Points)
 
 | CID            | Name                                  | Synopsis                                                                                                            |
 | -------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
