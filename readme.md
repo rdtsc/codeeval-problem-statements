@@ -135,7 +135,7 @@ were awarded for it by the online judge.</sup>
 | [161][cid-161] | [Game of Life][cid-161]                 | Implement the classical cellular automaton game                                                      |
 | [181][cid-181] | [Gronsfeld Cipher][cid-181]             | Decipher the message enciphered with the Gronsfeld cipher                                            |
 | [170][cid-170] | [Guess the Number][cid-170]             | Guess the number in log2(N) steps                                                                    |
-| [158][cid-158] | [Interrupted Bubble Sort][cid-158]      | Sort a list of elements. Partially                                                                   |
+| [158][cid-158] | [Interrupted Bubble Sort][cid-158]      | Sort a list of elements, partially                                                                   |
 | [043][cid-043] | [Jolly Jumpers][cid-043]                | Determine if a sequence of numbers is a Jolly Jumper                                                 |
 | [177][cid-177] | [Justify the Text][cid-177]             | Align the text to the specified width                                                                |
 | [153][cid-153] | [Locks][cid-153]                        | Calculate unlocked doors                                                                             |
