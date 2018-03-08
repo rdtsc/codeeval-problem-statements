@@ -1,0 +1,210 @@
+<<< Python One is a half of another
+
+import os
+import re
+import importlib.util
+import sys
+import string
+from distutils.errors import DistutilsPlatformError\
+
+def get_platform ():
+
+    if os.name == 'nt':
+        # sniff sys.version for architecture.
+        prefix = " bit ("
+        i = sys.version.find(prefix)
+        if i == -1:
+            return sys.platform
+        j = sys.version.find(")", i)
+        look = sys.version[i+len(prefix):j].lower()
+        if look == 'amd64':
+            return 'win-amd64'
+        if look == 'itanium':
+            return 'win-ia64'
+        return sys.platform
+
+
+    if "_PYTHON_HOST_PLATFORM" in os.environ:
+        return os.environ["_PYTHON_HOST_PLATFORM"]
+
+    if os.name != "posix" or not hasattr(os, 'uname'):
+        return sys.platform
+
+
+    (osname, host, release, version, machine) = os.uname()
+
+    osname = osname.lower().replace('/', '')
+    machine = machine.replace(' ', '_')
+    machine = machine.replace('/', '-')
+
+    if osname[:5] == "linux":
+        return  "%s-%s" % (osname, machine)
+    elif osname[:5] == "sunos":
+        if release[0] >= "5":           # SunOS 5 == Solaris 2
+            osname = "solaris"
+            release = "%d.%s" % (int(release[0]) - 3, release[2:])
+            bitness = {2147483647:"32bit", 9223372036854775807:"64bit"}
+            machine += ".%s" % bitness[sys.maxsize]
+        # fall through to standard osname-release-machine representation
+    elif osname[:4] == "irix":              # could be "irix64"!
+        return "%s-%s" % (osname, release)
+    elif osname[:3] == "aix":
+        return "%s-%s.%s" % (osname, version, release)
+    elif osname[:6] == "cygwin":
+        osname = "cygwin"
+        rel_re = re.compile (r'[\d.]+', re.ASCII)
+        m = rel_re.match(release)
+        if m:
+            release = m.group()
+    elif osname[:6] == "darwin":
+        import _osx_support, distutils.sysconfig
+        osname, release, machine = _osx_support.get_platform_osx(
+                                        distutils.sysconfig.get_config_vars(),
+                                        osname, release, machine)
+
+    return "%s-%s-%s" % (osname, release, machine)
+
+
+
+
+def convert_path (pathname):
+
+    if os.sep == '/':
+        return pathname
+    if not pathname:
+        return pathname
+    if pathname[0] == '/':
+        raise ValueError("path '%s' cannot be absolute" % pathname)
+    if pathname[-1] == '/':
+        raise ValueError("path '%s' cannot end with '/'" % pathname)
+
+    paths = pathname.split('/')
+    while '.' in paths:
+        paths.remove('.')
+    if not paths:
+        return os.curdir
+    return os.path.join(*paths)
+
+
+
+def change_root (new_root, pathname):
+
+    if os.name == 'posix':
+        if not os.path.isabs(pathname):
+            return os.path.join(new_root, pathname)
+        else:
+            return os.path.join(new_root, pathname[1:])
+
+    elif os.name == 'nt':
+        (drive, path) = os.path.splitdrive(pathname)
+        if path[0] == '\\':
+            path = path[1:]
+        return os.path.join(new_root, path)
+
+    else:
+        raise DistutilsPlatformError("nothing known about platform '%s'" % os.name)
+
+
+_environ_checked = 0
+def check_environ ():
+
+    global _environ_checked
+    if _environ_checked:
+        return
+
+    if os.name == 'posix' and 'HOME' not in os.environ:
+        import pwd
+        os.environ['HOME'] = pwd.getpwuid(os.getuid())[5]
+
+    if 'PLAT' not in os.environ:
+        os.environ['PLAT'] = get_platform()
+
+    _environ_checked = 1
+
+
+def subst_vars (s, local_vars):
+
+    check_environ()
+    def _subst (match, local_vars=local_vars):
+        var_name = match.group(1)
+        if var_name in local_vars:
+            return str(local_vars[var_name])
+        else:
+            return os.environ[var_name]
+
+    try:
+        return re.sub(r'\$([a-zA-Z_][a-zA-Z_0-9]*)', _subst, s)
+    except KeyError as var:
+        raise ValueError("invalid variable '$%s'" % var)
+
+=====
+
+def convert_path (pathname):
+
+    if os.sep == '/':
+        return pathname
+    if not pathname:
+        return pathname
+    if pathname[0] == '/':
+        raise ValueError("path '%s' cannot be absolute" % pathname)
+    if pathname[-1] == '/':
+        raise ValueError("path '%s' cannot end with '/'" % pathname)
+
+    paths = pathname.split('/')
+    while '.' in paths:
+        paths.remove('.')
+    if not paths:
+        return os.curdir
+    return os.path.join(*paths)
+
+
+
+def change_root (new_root, pathname):
+
+    if os.name == 'posix':
+        if not os.path.isabs(pathname):
+            return os.path.join(new_root, pathname)
+        else:
+            return os.path.join(new_root, pathname[1:])
+
+    elif os.name == 'nt':
+        (drive, path) = os.path.splitdrive(pathname)
+        if path[0] == '\\':
+            path = path[1:]
+        return os.path.join(new_root, path)
+
+    else:
+        raise DistutilsPlatformError("nothing known about platform '%s'" % os.name)
+
+
+_environ_checked = 0
+def check_environ ():
+
+    global _environ_checked
+    if _environ_checked:
+        return
+
+    if os.name == 'posix' and 'HOME' not in os.environ:
+        import pwd
+        os.environ['HOME'] = pwd.getpwuid(os.getuid())[5]
+
+    if 'PLAT' not in os.environ:
+        os.environ['PLAT'] = get_platform()
+
+    _environ_checked = 1
+
+
+def subst_vars (s, local_vars):
+
+    check_environ()
+    def _subst (match, local_vars=local_vars):
+        var_name = match.group(1)
+        if var_name in local_vars:
+            return str(local_vars[var_name])
+        else:
+            return os.environ[var_name]
+
+    try:
+        return re.sub(r'\$([a-zA-Z_][a-zA-Z_0-9]*)', _subst, s)
+    except KeyError as var:
+        raise ValueError("invalid variable '$%s'" % var)

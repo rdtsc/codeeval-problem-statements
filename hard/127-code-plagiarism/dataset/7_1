@@ -1,0 +1,36 @@
+<<< Python Two approaches to the one problem
+
+def two_pass_variance(data):
+    num = 0
+    sum1 = 0
+    sum2 = 0
+
+    for item in data:
+        n    = n + 1
+        sum1 = sum1 + item
+
+    mean = sum1/n
+
+    for item in data:
+        sum2 = sum2 + (item - mean)*(item - mean)
+
+    variance = sum2/(n - 1)
+    return variance
+
+=====
+
+def compensated_variance(data):
+    n = 0
+    sum1 = 0
+    for x in data:
+        n = n + 1
+        sum1 = sum1 + x
+    mean = sum1/n
+
+    sum2 = 0
+    sum3 = 0
+    for x in data:
+        sum2 = sum2 + (x - mean)**2
+        sum3 = sum3 + (x - mean)
+    variance = (sum2 - sum3**2/n)/(n - 1)
+    return variance

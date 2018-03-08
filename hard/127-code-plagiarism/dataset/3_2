@@ -1,0 +1,160 @@
+<<< Go One is a half of another
+
+func (p *printer) commentsHaveNewline(list []*ast.Comment) bool {
+        // len(list) > 0
+        line := p.lineFor(list[0].Pos())
+        for i, c := range list {
+                if i > 0 && p.lineFor(list[i].Pos()) != line {
+                        // not all comments on the same line
+                        return true
+                }
+                if t := c.Text; len(t) >= 2 && (t[1] == '/' || strings.Contains(t, "\n")) {
+                        return true
+                }
+        }
+        _ = line
+        return false
+}
+
+func (p *printer) nextComment() {
+        for p.cindex < len(p.comments) {
+                c := p.comments[p.cindex]
+                p.cindex++
+                if list := c.List; len(list) > 0 {
+                        p.comment = c
+                        p.commentOffset = p.posFor(list[0].Pos()).Offset
+                        p.commentNewline = p.commentsHaveNewline(list)
+                        return
+                }
+                // we should not reach here (correct ASTs don't have empty
+                // ast.CommentGroup nodes), but be conservative and try again
+        }
+        // no more comments
+        p.commentOffset = infinity
+}
+
+func (p *printer) internalError(msg ...interface{}) {
+        if debug {
+                fmt.Print(p.pos.String() + ": ")
+                fmt.Println(msg...)
+                panic("go/printer")
+        }
+}
+
+func (p *printer) posFor(pos token.Pos) token.Position {
+        // not used frequently enough to cache entire token.Position
+        return p.fset.Position(pos)
+}
+
+func (p *printer) lineFor(pos token.Pos) int {
+        if pos != p.cachedPos {
+                p.cachedPos = pos
+                p.cachedLine = p.fset.Position(pos).Line
+        }
+        return p.cachedLine
+}
+
+// atLineBegin emits a //line comment if necessary and prints indentation.
+func (p *printer) atLineBegin(pos token.Position) {
+        // write a //line comment if necessary
+        if p.Config.Mode&SourcePos != 0 && pos.IsValid() && (p.out.Line != pos.Line || p.out.Filename != pos.Filename) {
+                p.output = append(p.output, tabwriter.Escape) // protect '\n' in //line from tabwriter interpretation
+                p.output = append(p.output, fmt.Sprintf("//line %s:%d\n", pos.Filename, pos.Line)...)
+                p.output = append(p.output, tabwriter.Escape)
+                // p.out must match the //line comment
+                p.out.Filename = pos.Filename
+                p.out.Line = pos.Line
+        }
+
+        // write indentation
+        // use "hard" htabs - indentation columns
+        // must not be discarded by the tabwriter
+        n := p.Config.Indent + p.indent // include base indentation
+        for i := 0; i < n; i++ {
+                p.output = append(p.output, '\t')
+        }
+
+        // update positions
+        p.pos.Offset += n
+        p.pos.Column += n
+        p.out.Column += n
+}
+
+// writeByte writes ch n times to p.output and updates p.pos.
+func (p *printer) writeByte(ch byte, n int) {
+        if p.out.Column == 1 {
+                p.atLineBegin(p.pos)
+        }
+
+        for i := 0; i < n; i++ {
+                p.output = append(p.output, ch)
+        }
+
+        // update positions
+        p.pos.Offset += n
+        if ch == '\n' || ch == '\f' {
+                p.pos.Line += n
+                p.out.Line += n
+                p.pos.Column = 1
+                p.out.Column = 1
+                return
+        }
+        p.pos.Column += n
+        p.out.Column += n
+}
+
+=====
+
+func (p *printer) commentsHaveNewline(list []*ast.Comment) bool {
+        // len(list) > 0
+        line := p.lineFor(list[0].Pos())
+        for i, c := range list {
+                if i > 0 && p.lineFor(list[i].Pos()) != line {
+                        // not all comments on the same line
+                        return true
+                }
+                if t := c.Text; len(t) >= 2 && (t[1] == '/' || strings.Contains(t, "\n")) {
+                        return true
+                }
+        }
+        _ = line
+        return false
+}
+
+func (p *printer) nextComment() {
+        for p.cindex < len(p.comments) {
+                c := p.comments[p.cindex]
+                p.cindex++
+                if list := c.List; len(list) > 0 {
+                        p.comment = c
+                        p.commentOffset = p.posFor(list[0].Pos()).Offset
+                        p.commentNewline = p.commentsHaveNewline(list)
+                        return
+                }
+                // we should not reach here (correct ASTs don't have empty
+                // ast.CommentGroup nodes), but be conservative and try again
+        }
+        // no more comments
+        p.commentOffset = infinity
+}
+
+func (p *printer) internalError(msg ...interface{}) {
+        if debug {
+                fmt.Print(p.pos.String() + ": ")
+                fmt.Println(msg...)
+                panic("go/printer")
+        }
+}
+
+func (p *printer) posFor(pos token.Pos) token.Position {
+        // not used frequently enough to cache entire token.Position
+        return p.fset.Position(pos)
+}
+
+func (p *printer) lineFor(pos token.Pos) int {
+        if pos != p.cachedPos {
+                p.cachedPos = pos
+                p.cachedLine = p.fset.Position(pos).Line
+        }
+        return p.cachedLine
+}

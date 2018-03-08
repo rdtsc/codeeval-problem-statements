@@ -1,0 +1,131 @@
+<<< Python Changed names of variables
+
+MAX_SIZE = 100
+
+class Mapping:
+    def __init__(self, iterable):
+        self.items_list = []
+        self.__update(iterable)
+
+    def update(self, iterable):
+        for item in iterable:
+            self.items_list.append(item)
+
+    __update = update   # private copy of original update() method
+
+
+class MappingSubclass(Mapping):
+
+    def update(self, keys, values):
+        # provides new signature for update()
+        # but does not break __init__()
+        for item in zip(keys, values):
+            self.items_list.append(item)
+
+def quickSort(alist):
+   quickSortHelper(alist,0,len(alist)-1)
+
+def quickSortHelper(alist,first,last):
+   if first<last:
+
+       splitpoint = partition(alist,first,last)
+
+       quickSortHelper(alist,first,splitpoint-1)
+       quickSortHelper(alist,splitpoint+1,last)
+
+
+def partition(alist,first,last):
+   pivotvalue = alist[first]
+
+   leftmark = first+1
+   rightmark = last
+
+   done = False
+   while not done:
+
+       while leftmark <= rightmark and \
+               alist[leftmark] <= pivotvalue:
+           leftmark = leftmark + 1
+
+       while alist[rightmark] >= pivotvalue and \
+               rightmark >= leftmark:
+           rightmark = rightmark -1
+
+       if rightmark < leftmark:
+           done = True
+       else:
+           temp = alist[leftmark]
+           alist[leftmark] = alist[rightmark]
+           alist[rightmark] = temp
+
+   temp = alist[first]
+   alist[first] = alist[rightmark]
+   alist[rightmark] = temp
+
+
+   return rightmark
+
+=====
+
+SIZE = 100
+
+class Map:
+    def __init__(self, iter):
+        self.i_list = []
+        self.__upd(iterable)
+
+    def upd(self, iterat):
+        for item in iterat:
+            self.i_list.append(item)
+
+    __upd = upd   # private copy of original update() method
+
+class MapSub(Map):
+
+    def upd(self, keys, values):
+        # provides new signature for update()
+        # but does not break __init__()
+        for item in zip(keys, values):
+            self.items_list.append(item)
+
+def qS(mylst):
+   qSH(mylst,0,len(mylst)-1)
+
+def qSH(mylst,start,end):
+   if start<end:
+
+       centersplit = Myfunc(mylst,start,end)
+
+       qSH(mylst,start,centersplit-1)
+       qSH(mylst,centersplit+1,end)
+
+
+def Myfunc(mylist,start,finish):
+   tempvalue = mylist[start]
+
+   left = start+1
+   right = finish
+
+   done = False
+   while not done:
+
+       while left <= right and \
+               mylist[left] <= tempvalue:
+           left = left + 1
+
+       while mylist[right] >= tempvalue and \
+               right >= left:
+           right = right -1
+       if right < left:
+           done = True
+       else:
+           temp = mylist[left]
+           mylist[left] = mylist[right]
+           mylist[right] = temp
+
+   temp = mylist[start]
+   mylist[start] = mylist[right]
+   mylist[right] = temp
+
+
+   return right

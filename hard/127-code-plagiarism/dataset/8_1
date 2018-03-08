@@ -1,0 +1,102 @@
+<<< Python Different code
+
+def quickSort(alist):
+   quickSortHelper(alist,0,len(alist)-1)
+
+def quickSortHelper(alist,first,last):
+   if first<last:
+
+       splitpoint = partition(alist,first,last)
+
+       quickSortHelper(alist,first,splitpoint-1)
+       quickSortHelper(alist,splitpoint+1,last)
+
+
+def partition(alist,first,last):
+   pivotvalue = alist[first]
+
+   leftmark = first+1
+   rightmark = last
+
+   done = False
+   while not done:
+
+       while leftmark <= rightmark and \
+               alist[leftmark] <= pivotvalue:
+           leftmark = leftmark + 1
+
+       while alist[rightmark] >= pivotvalue and \
+               rightmark >= leftmark:
+           rightmark = rightmark -1
+
+       if rightmark < leftmark:
+           done = True
+       else:
+           temp = alist[leftmark]
+           alist[leftmark] = alist[rightmark]
+           alist[rightmark] = temp
+
+   temp = alist[first]
+   alist[first] = alist[rightmark]
+   alist[rightmark] = temp
+
+
+   return rightmark
+
+=====
+
+def adj(g):
+    """
+    Convert a directed graph to an adjaceny matrix.
+    >>> g = {1: {2: 3, 3: 8, 5: -4}, 2: {4: 1, 5: 7}, 3: {2: 4}, 4: {1: 2, 3: -5}, 5: {4: 6}}
+    >>> adj(g)
+    {1: {1: 0, 2: 3, 3: 8, 4: inf, 5: -4}, 2: {1: inf, 2: 0, 3: inf, 4: 1, 5: 7}, 3: {1: inf, 2: 4, 3: 0, 4: inf, 5: inf}, 4: {1: 2, 2: inf, 3: -5, 4: 0, 5: inf}, 5: {1: inf, 2: inf, 3: inf, 4: 6, 5: 0}}
+    """
+    vertices = g.keys()
+	# create dictionary
+    dist = {}
+	# computing distance
+    for i in vertices:
+        dist[i] = {}
+        for j in vertices:
+		 # If no index
+            try:
+                dist[i][j] = g[i][j]
+            except KeyError:
+                # the distance from a node to itself is 0
+                if i == j:
+                    dist[i][j] = 0
+                # the distance from a node to an unconnected node is infinity
+                else:
+                    dist[i][j] = float('inf')
+    return dist
+
+
+def fw(g):
+    """
+    Run the Floyd Warshall algorithm on an adjacency matrix.
+
+    The Floyd Warshall algorithm computes the minimum cost of a simple path between each
+    pair of vertices.
+    >>> g = {1: {2: 3, 3: 8, 5: -4}, 2: {4: 1, 5: 7}, 3: {2: 4}, 4: {1: 2, 3: -5}, 5: {4: 6}}
+    >>> fw(adj(g))
+    {1: {1: 0, 2: 1, 3: -3, 4: 2, 5: -4}, 2: {1: 3, 2: 0, 3: -4, 4: 1, 5: -1}, 3: {1: 7, 2: 4, 3: 0, 4: 5, 5: 3}, 4: {1: 2, 2: -1, 3: -5, 4: 0, 5: -2}, 5: {1: 8, 2: 5, 3: 1, 4: 6, 5: 0}}
+    >>> h = {1: {2: 1}, 2: {1 : 1, 3: -1}, 3: {2: -1}}
+    >>> fw(adj(h))
+    """
+    vertices = g.keys()
+
+    d = dict(g)  # copy g
+    for k in vertices:
+	# Another vertices
+        for i in vertices:
+		# Another vertices
+            for j in vertices:
+			# Find min
+                d[i][j] = min(d[i][j], d[i][k] + d[k][j])
+    return d
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()

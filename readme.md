@@ -15,8 +15,8 @@ that once lived on the platform.
 <p>
   <sup>
   ‡ Technically, there were 240 challenges on the platform. Challenge #127
-  ("Code Plagiarism") is not included because it wasn't a graded challenge, and
-  thus no points were awarded for it by the online evaluation system.
+  ("Code Plagiarism") wasn't an interactive/graded challenge; thus no points
+  were awarded for it by the online evaluation system.
   </sup>
 </p>
 
@@ -209,6 +209,7 @@ that once lived on the platform.
 | [064][cid-064] | [Climbing Stairs][cid-064]            | Count the number of ways to climb to the top of a staircase                                                         |
 | [051][cid-051] | [Closest Pair][cid-051]               | Given a set of points in a two dimensional space, you will have to find the distance between the closest two points |
 | [234][cid-234] | [Code Like Huffman][cid-234]          | Learn more about Huffman's tree                                                                                     |
+| [127][cid-127] | [Code Plagiarism][cid-127]            | Compare source code of two programs                                                                                 |
 | [090][cid-090] | [Commuting Engineer][cid-090]         | Travelling Salesman Problem                                                                                         |
 | [108][cid-108] | [Computer Terminal][cid-108]          | Print text to terminal with control sequences                                                                       |
 | [151][cid-151] | [Cracking Eggs][cid-151]              | Determine the number of drops                                                                                       |
@@ -668,6 +669,9 @@ logos are property of their respective owners.
            "Jump to Problem Statement"
 
 [cid-126]: hard/126-play-with-dna
+           "Jump to Problem Statement"
+
+[cid-127]: hard/127-code-plagiarism
            "Jump to Problem Statement"
 
 [cid-128]: easy/128-compressed-sequence

@@ -1,0 +1,20 @@
+<<< Go Two approaches to the one problem
+
+package main
+
+import "os"
+
+func main() {
+    os.Stdout.WriteString("Hello, World!")
+}
+
+=====
+
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+

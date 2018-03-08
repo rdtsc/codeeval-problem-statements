@@ -1,0 +1,21 @@
+<<< Go "Hello World"
+
+package main
+
+import "os"
+
+func main() {
+    os.Stdout.WriteString("Hello, World!")
+}
+
+=====
+
+package main
+
+import "fmt"
+
+func main() {
+    var s string
+    s += "Hello, World!"
+    fmt.Println(s)
+}

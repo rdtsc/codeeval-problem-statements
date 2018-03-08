@@ -1,0 +1,5 @@
+problemId: 127
+name: Code Plagiarism
+category: Hard
+summary: Compare source code of two programs.
+url: "https://www.codeeval.com/browse/127/"

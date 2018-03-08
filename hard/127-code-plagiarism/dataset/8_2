@@ -1,0 +1,65 @@
+<<< Go Different code
+
+package main
+
+import (
+        "fmt"
+
+        "github.com/google/go-github/github"
+)
+
+func main() {
+        client := github.NewClient(nil)
+
+        fmt.Println("Recently updated repositories owned by user willnorris:")
+
+        opt := &github.RepositoryListOptions{Type: "owner", Sort: "updated", Direction: "desc"}
+        repos, _, err := client.Repositories.List("willnorris", opt)
+        if err != nil {
+                fmt.Printf("error: %v\n\n", err)
+        } else {
+                fmt.Printf("%v\n\n", github.Stringify(repos))
+        }
+
+        rate, _, err := client.RateLimit()
+        if err != nil {
+                fmt.Printf("Error fetching rate limit: %#v\n\n", err)
+        } else {
+                fmt.Printf("API Rate Limit: %#v\n\n", rate)
+        }
+}
+
+=====
+
+func (ms *multiSorter) Less(i, j int) bool {
+    p, q := &ms.changes[i], &ms.changes[j]
+    // Try all but the last comparison.
+    var k int
+    for k = 0; k < len(ms.less)-1; k++ {
+        less := ms.less[k]
+        switch {
+        case less(p, q):
+            // p < q, so we have a decision.
+            return true
+        case less(q, p):
+            // p > q, so we have a decision.
+            return false
+        }
+        // p == q; try the next comparison.
+    }
+    // All comparisons to here said "equal", so just return whatever
+    // the final comparison reports.
+    return ms.less[k](p, q)
+}
+
+var changes = []Change{
+    {"gri", "Go", 100},
+    {"ken", "C", 150},
+    {"glenda", "Go", 200},
+    {"rsc", "Go", 200},
+    {"r", "Go", 100},
+    {"ken", "Go", 200},
+    {"dmr", "C", 100},
+    {"r", "C", 150},
+    {"gri", "Smalltalk", 80},
+}

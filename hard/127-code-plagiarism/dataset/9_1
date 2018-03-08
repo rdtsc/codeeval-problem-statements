@@ -1,0 +1,10 @@
+<<< Python "Hello World"
+
+import sys
+sys.stdout.write("Hello World")
+
+=====
+
+if __name__ == "__main__":
+    greetings = "Hello, World!"
+    print greetings

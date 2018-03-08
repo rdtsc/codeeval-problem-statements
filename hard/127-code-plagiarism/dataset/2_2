@@ -1,0 +1,151 @@
+<<< Go Changed names of variables
+
+type Integer int;
+func (i *Integer) String() string {
+    return strconv.itoa(i)
+}
+
+func binarySort(a []interface{}, lo, hi, start int, lt LessThan) (err error) {
+        if lo > start || start > hi {
+                return errors.New("lo <= start && start <= hi")
+        }
+
+        if start == lo {
+                start++
+        }
+
+        for ; start < hi; start++ {
+                pivot := a[start]
+
+                // Set left (and right) to the index where a[start] (pivot) belongs
+                left := lo
+                right := start
+
+                if left > right {
+                        return errors.New("left <= right")
+                }
+
+                for left < right {
+                        mid := (left + right) / 2
+                        if lt(pivot, a[mid]) {
+                                right = mid
+                        } else {
+                                left = mid + 1
+                        }
+                }
+
+                if left != right {
+                        return errors.New("left == right")
+                }
+
+                n := start - left // The number of elements to move
+                // just an optimization for copy in default case
+                if n <= 2 {
+                        if n == 2 {
+                                a[left+2] = a[left+1]
+                        }
+                        if n > 0 {
+                                a[left+1] = a[left]
+                        }
+                } else {
+                        copy(a[left+1:], a[left:left+n])
+                }
+                a[left] = pivot
+        }
+        return
+}
+
+func Sort(a []interface{}, lt LessThan) (err error) {
+        lo := 0
+        hi := len(a)
+        nRemaining := hi
+
+        if nRemaining < 2 {
+                return // Arrays of size 0 and 1 are always sorted
+        }
+
+        // If array is small, do a "mini-TimSort" with no merges
+        if nRemaining < _MIN_MERGE {
+                initRunLen, err := countRunAndMakeAscending(a, lo, hi, lt)
+                if err != nil {
+                        return err
+                }
+
+                return binarySort(a, lo, hi, lo+initRunLen, lt)
+        }
+
+=====
+
+type Myclass int;
+func (i *Myclass) String() string {
+    return strconv.itoa(i)
+}
+
+func Sorting(ar []interface{}, low, hight, begin int, lesst LessThan) (err error) {
+        if low > begin || begin > hight {
+                return errors.New("low <= begin && begin <= hight")
+        }
+
+        if begin == low {
+                begin++
+        }
+
+        for ; begin < hight; begin++ {
+                pivot := ar[begin]
+
+                // Set left (and right) to the index where ar[begin] (pivot) belongs
+                left := low
+                right := begin
+
+                if left > right {
+                        return errors.New("left <= right")
+                }
+
+                for left < right {
+                        mid := (left + right) / 2
+                        if lesst(pivot, ar[mid]) {
+                                right = mid
+                        } else {
+                                left = mid + 1
+                        }
+                }
+
+                if left != right {
+                        return errors.New("left == right")
+                }
+
+                n := begin - left // The number of elements to move
+
+                if n <= 2 {
+                        if n == 2 {
+                                ar[left+2] = ar[left+1]
+                        }
+                        if n > 0 {
+                                ar[left+1] = ar[left]
+                        }
+                } else {
+                        copy(ar[left+1:], ar[left:left+n])
+                }
+                ar[left] = pivot
+        }
+        return
+}
+
+func Sort(ar []interface{}, lesst LessThan) (err error) {
+        hight := len(ar)
+        nRemaining := hight
+        low := 0
+
+        if nRemaining < 2 {
+                return // Arrays of size 0 and 1 are always sorted
+        }
+
+        // If array is small, do ar "mini-TimSort" with no merges
+        if nRemaining < _MIN_MERGE {
+                initRunLen, err := countRunAndMakeAscending(ar, low, hight, lesst)
+                if err != nil {
+                        return err
+                }
+
+                return Sorting(ar, low, hight, low+initRunLen, lesst)
+        }

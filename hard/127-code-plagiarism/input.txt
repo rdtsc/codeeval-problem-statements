@@ -1,0 +1,2080 @@
+<<< Python The same code
+
+def quickSort(alist):
+   quickSortHelper(alist,0,len(alist)-1)
+
+def quickSortHelper(alist,first,last):
+   if first<last:
+
+       splitpoint = partition(alist,first,last)
+
+       quickSortHelper(alist,first,splitpoint-1)
+       quickSortHelper(alist,splitpoint+1,last)
+
+
+def partition(alist,first,last):
+   pivotvalue = alist[first]
+
+   leftmark = first+1
+   rightmark = last
+
+   done = False
+   while not done:
+
+       while leftmark <= rightmark and \
+               alist[leftmark] <= pivotvalue:
+           leftmark = leftmark + 1
+
+       while alist[rightmark] >= pivotvalue and \
+               rightmark >= leftmark:
+           rightmark = rightmark -1
+
+       if rightmark < leftmark:
+           done = True
+       else:
+           temp = alist[leftmark]
+           alist[leftmark] = alist[rightmark]
+           alist[rightmark] = temp
+
+   temp = alist[first]
+   alist[first] = alist[rightmark]
+   alist[rightmark] = temp
+
+
+   return rightmark
+
+=====
+
+def quickSort(alist):
+   quickSortHelper(alist,0,len(alist)-1)
+
+def quickSortHelper(alist,first,last):
+   if first<last:
+
+       splitpoint = partition(alist,first,last)
+
+       quickSortHelper(alist,first,splitpoint-1)
+       quickSortHelper(alist,splitpoint+1,last)
+
+
+def partition(alist,first,last):
+   pivotvalue = alist[first]
+
+   leftmark = first+1
+   rightmark = last
+
+   done = False
+   while not done:
+
+       while leftmark <= rightmark and \
+               alist[leftmark] <= pivotvalue:
+           leftmark = leftmark + 1
+
+       while alist[rightmark] >= pivotvalue and \
+               rightmark >= leftmark:
+           rightmark = rightmark -1
+
+       if rightmark < leftmark:
+           done = True
+       else:
+           temp = alist[leftmark]
+           alist[leftmark] = alist[rightmark]
+           alist[rightmark] = temp
+
+   temp = alist[first]
+   alist[first] = alist[rightmark]
+   alist[rightmark] = temp
+
+
+   return rightmark
+*****
+<<< Go The same code
+
+package main
+
+import (
+        "fmt"
+
+        "github.com/google/go-github/github"
+)
+
+func main() {
+        client := github.NewClient(nil)
+
+        fmt.Println("Recently updated repositories owned by user willnorris:")
+
+        opt := &github.RepositoryListOptions{Type: "owner", Sort: "updated", Direction: "desc"}
+        repos, _, err := client.Repositories.List("willnorris", opt)
+        if err != nil {
+                fmt.Printf("error: %v\n\n", err)
+        } else {
+                fmt.Printf("%v\n\n", github.Stringify(repos))
+        }
+
+        rate, _, err := client.RateLimit()
+        if err != nil {
+                fmt.Printf("Error fetching rate limit: %#v\n\n", err)
+        } else {
+                fmt.Printf("API Rate Limit: %#v\n\n", rate)
+        }
+}
+
+=====
+
+package main
+
+import (
+        "fmt"
+
+        "github.com/google/go-github/github"
+)
+
+func main() {
+        client := github.NewClient(nil)
+
+        fmt.Println("Recently updated repositories owned by user willnorris:")
+
+        opt := &github.RepositoryListOptions{Type: "owner", Sort: "updated", Direction: "desc"}
+        repos, _, err := client.Repositories.List("willnorris", opt)
+        if err != nil {
+                fmt.Printf("error: %v\n\n", err)
+        } else {
+                fmt.Printf("%v\n\n", github.Stringify(repos))
+        }
+
+        rate, _, err := client.RateLimit()
+        if err != nil {
+                fmt.Printf("Error fetching rate limit: %#v\n\n", err)
+        } else {
+                fmt.Printf("API Rate Limit: %#v\n\n", rate)
+        }
+}
+*****
+<<< Python Changed names of variables
+
+MAX_SIZE = 100
+
+class Mapping:
+    def __init__(self, iterable):
+        self.items_list = []
+        self.__update(iterable)
+
+    def update(self, iterable):
+        for item in iterable:
+            self.items_list.append(item)
+
+    __update = update   # private copy of original update() method
+
+
+class MappingSubclass(Mapping):
+
+    def update(self, keys, values):
+        # provides new signature for update()
+        # but does not break __init__()
+        for item in zip(keys, values):
+            self.items_list.append(item)
+
+def quickSort(alist):
+   quickSortHelper(alist,0,len(alist)-1)
+
+def quickSortHelper(alist,first,last):
+   if first<last:
+
+       splitpoint = partition(alist,first,last)
+
+       quickSortHelper(alist,first,splitpoint-1)
+       quickSortHelper(alist,splitpoint+1,last)
+
+
+def partition(alist,first,last):
+   pivotvalue = alist[first]
+
+   leftmark = first+1
+   rightmark = last
+
+   done = False
+   while not done:
+
+       while leftmark <= rightmark and \
+               alist[leftmark] <= pivotvalue:
+           leftmark = leftmark + 1
+
+       while alist[rightmark] >= pivotvalue and \
+               rightmark >= leftmark:
+           rightmark = rightmark -1
+
+       if rightmark < leftmark:
+           done = True
+       else:
+           temp = alist[leftmark]
+           alist[leftmark] = alist[rightmark]
+           alist[rightmark] = temp
+
+   temp = alist[first]
+   alist[first] = alist[rightmark]
+   alist[rightmark] = temp
+
+
+   return rightmark
+
+=====
+
+SIZE = 100
+
+class Map:
+    def __init__(self, iter):
+        self.i_list = []
+        self.__upd(iterable)
+
+    def upd(self, iterat):
+        for item in iterat:
+            self.i_list.append(item)
+
+    __upd = upd   # private copy of original update() method
+
+class MapSub(Map):
+
+    def upd(self, keys, values):
+        # provides new signature for update()
+        # but does not break __init__()
+        for item in zip(keys, values):
+            self.items_list.append(item)
+
+def qS(mylst):
+   qSH(mylst,0,len(mylst)-1)
+
+def qSH(mylst,start,end):
+   if start<end:
+
+       centersplit = Myfunc(mylst,start,end)
+
+       qSH(mylst,start,centersplit-1)
+       qSH(mylst,centersplit+1,end)
+
+
+def Myfunc(mylist,start,finish):
+   tempvalue = mylist[start]
+
+   left = start+1
+   right = finish
+
+   done = False
+   while not done:
+
+       while left <= right and \
+               mylist[left] <= tempvalue:
+           left = left + 1
+
+       while mylist[right] >= tempvalue and \
+               right >= left:
+           right = right -1
+       if right < left:
+           done = True
+       else:
+           temp = mylist[left]
+           mylist[left] = mylist[right]
+           mylist[right] = temp
+
+   temp = mylist[start]
+   mylist[start] = mylist[right]
+   mylist[right] = temp
+
+
+   return right
+*****
+<<< Go Changed names of variables
+
+type Integer int;
+func (i *Integer) String() string {
+    return strconv.itoa(i)
+}
+
+func binarySort(a []interface{}, lo, hi, start int, lt LessThan) (err error) {
+        if lo > start || start > hi {
+                return errors.New("lo <= start && start <= hi")
+        }
+
+        if start == lo {
+                start++
+        }
+
+        for ; start < hi; start++ {
+                pivot := a[start]
+
+                // Set left (and right) to the index where a[start] (pivot) belongs
+                left := lo
+                right := start
+
+                if left > right {
+                        return errors.New("left <= right")
+                }
+
+                for left < right {
+                        mid := (left + right) / 2
+                        if lt(pivot, a[mid]) {
+                                right = mid
+                        } else {
+                                left = mid + 1
+                        }
+                }
+
+                if left != right {
+                        return errors.New("left == right")
+                }
+
+                n := start - left // The number of elements to move
+                // just an optimization for copy in default case
+                if n <= 2 {
+                        if n == 2 {
+                                a[left+2] = a[left+1]
+                        }
+                        if n > 0 {
+                                a[left+1] = a[left]
+                        }
+                } else {
+                        copy(a[left+1:], a[left:left+n])
+                }
+                a[left] = pivot
+        }
+        return
+}
+
+func Sort(a []interface{}, lt LessThan) (err error) {
+        lo := 0
+        hi := len(a)
+        nRemaining := hi
+
+        if nRemaining < 2 {
+                return // Arrays of size 0 and 1 are always sorted
+        }
+
+        // If array is small, do a "mini-TimSort" with no merges
+        if nRemaining < _MIN_MERGE {
+                initRunLen, err := countRunAndMakeAscending(a, lo, hi, lt)
+                if err != nil {
+                        return err
+                }
+
+                return binarySort(a, lo, hi, lo+initRunLen, lt)
+        }
+
+=====
+
+type Myclass int;
+func (i *Myclass) String() string {
+    return strconv.itoa(i)
+}
+
+func Sorting(ar []interface{}, low, hight, begin int, lesst LessThan) (err error) {
+        if low > begin || begin > hight {
+                return errors.New("low <= begin && begin <= hight")
+        }
+
+        if begin == low {
+                begin++
+        }
+
+        for ; begin < hight; begin++ {
+                pivot := ar[begin]
+
+                // Set left (and right) to the index where ar[begin] (pivot) belongs
+                left := low
+                right := begin
+
+                if left > right {
+                        return errors.New("left <= right")
+                }
+
+                for left < right {
+                        mid := (left + right) / 2
+                        if lesst(pivot, ar[mid]) {
+                                right = mid
+                        } else {
+                                left = mid + 1
+                        }
+                }
+
+                if left != right {
+                        return errors.New("left == right")
+                }
+
+                n := begin - left // The number of elements to move
+
+                if n <= 2 {
+                        if n == 2 {
+                                ar[left+2] = ar[left+1]
+                        }
+                        if n > 0 {
+                                ar[left+1] = ar[left]
+                        }
+                } else {
+                        copy(ar[left+1:], ar[left:left+n])
+                }
+                ar[left] = pivot
+        }
+        return
+}
+
+func Sort(ar []interface{}, lesst LessThan) (err error) {
+        hight := len(ar)
+        nRemaining := hight
+        low := 0
+
+        if nRemaining < 2 {
+                return // Arrays of size 0 and 1 are always sorted
+        }
+
+        // If array is small, do ar "mini-TimSort" with no merges
+        if nRemaining < _MIN_MERGE {
+                initRunLen, err := countRunAndMakeAscending(ar, low, hight, lesst)
+                if err != nil {
+                        return err
+                }
+
+                return Sorting(ar, low, hight, low+initRunLen, lesst)
+        }
+*****
+<<< Python One is a half of another
+
+import os
+import re
+import importlib.util
+import sys
+import string
+from distutils.errors import DistutilsPlatformError\
+
+def get_platform ():
+
+    if os.name == 'nt':
+        # sniff sys.version for architecture.
+        prefix = " bit ("
+        i = sys.version.find(prefix)
+        if i == -1:
+            return sys.platform
+        j = sys.version.find(")", i)
+        look = sys.version[i+len(prefix):j].lower()
+        if look == 'amd64':
+            return 'win-amd64'
+        if look == 'itanium':
+            return 'win-ia64'
+        return sys.platform
+
+
+    if "_PYTHON_HOST_PLATFORM" in os.environ:
+        return os.environ["_PYTHON_HOST_PLATFORM"]
+
+    if os.name != "posix" or not hasattr(os, 'uname'):
+        return sys.platform
+
+
+    (osname, host, release, version, machine) = os.uname()
+
+    osname = osname.lower().replace('/', '')
+    machine = machine.replace(' ', '_')
+    machine = machine.replace('/', '-')
+
+    if osname[:5] == "linux":
+        return  "%s-%s" % (osname, machine)
+    elif osname[:5] == "sunos":
+        if release[0] >= "5":           # SunOS 5 == Solaris 2
+            osname = "solaris"
+            release = "%d.%s" % (int(release[0]) - 3, release[2:])
+            bitness = {2147483647:"32bit", 9223372036854775807:"64bit"}
+            machine += ".%s" % bitness[sys.maxsize]
+        # fall through to standard osname-release-machine representation
+    elif osname[:4] == "irix":              # could be "irix64"!
+        return "%s-%s" % (osname, release)
+    elif osname[:3] == "aix":
+        return "%s-%s.%s" % (osname, version, release)
+    elif osname[:6] == "cygwin":
+        osname = "cygwin"
+        rel_re = re.compile (r'[\d.]+', re.ASCII)
+        m = rel_re.match(release)
+        if m:
+            release = m.group()
+    elif osname[:6] == "darwin":
+        import _osx_support, distutils.sysconfig
+        osname, release, machine = _osx_support.get_platform_osx(
+                                        distutils.sysconfig.get_config_vars(),
+                                        osname, release, machine)
+
+    return "%s-%s-%s" % (osname, release, machine)
+
+
+
+
+def convert_path (pathname):
+
+    if os.sep == '/':
+        return pathname
+    if not pathname:
+        return pathname
+    if pathname[0] == '/':
+        raise ValueError("path '%s' cannot be absolute" % pathname)
+    if pathname[-1] == '/':
+        raise ValueError("path '%s' cannot end with '/'" % pathname)
+
+    paths = pathname.split('/')
+    while '.' in paths:
+        paths.remove('.')
+    if not paths:
+        return os.curdir
+    return os.path.join(*paths)
+
+
+
+def change_root (new_root, pathname):
+
+    if os.name == 'posix':
+        if not os.path.isabs(pathname):
+            return os.path.join(new_root, pathname)
+        else:
+            return os.path.join(new_root, pathname[1:])
+
+    elif os.name == 'nt':
+        (drive, path) = os.path.splitdrive(pathname)
+        if path[0] == '\\':
+            path = path[1:]
+        return os.path.join(new_root, path)
+
+    else:
+        raise DistutilsPlatformError("nothing known about platform '%s'" % os.name)
+
+
+_environ_checked = 0
+def check_environ ():
+
+    global _environ_checked
+    if _environ_checked:
+        return
+
+    if os.name == 'posix' and 'HOME' not in os.environ:
+        import pwd
+        os.environ['HOME'] = pwd.getpwuid(os.getuid())[5]
+
+    if 'PLAT' not in os.environ:
+        os.environ['PLAT'] = get_platform()
+
+    _environ_checked = 1
+
+
+def subst_vars (s, local_vars):
+
+    check_environ()
+    def _subst (match, local_vars=local_vars):
+        var_name = match.group(1)
+        if var_name in local_vars:
+            return str(local_vars[var_name])
+        else:
+            return os.environ[var_name]
+
+    try:
+        return re.sub(r'\$([a-zA-Z_][a-zA-Z_0-9]*)', _subst, s)
+    except KeyError as var:
+        raise ValueError("invalid variable '$%s'" % var)
+
+=====
+
+def convert_path (pathname):
+
+    if os.sep == '/':
+        return pathname
+    if not pathname:
+        return pathname
+    if pathname[0] == '/':
+        raise ValueError("path '%s' cannot be absolute" % pathname)
+    if pathname[-1] == '/':
+        raise ValueError("path '%s' cannot end with '/'" % pathname)
+
+    paths = pathname.split('/')
+    while '.' in paths:
+        paths.remove('.')
+    if not paths:
+        return os.curdir
+    return os.path.join(*paths)
+
+
+
+def change_root (new_root, pathname):
+
+    if os.name == 'posix':
+        if not os.path.isabs(pathname):
+            return os.path.join(new_root, pathname)
+        else:
+            return os.path.join(new_root, pathname[1:])
+
+    elif os.name == 'nt':
+        (drive, path) = os.path.splitdrive(pathname)
+        if path[0] == '\\':
+            path = path[1:]
+        return os.path.join(new_root, path)
+
+    else:
+        raise DistutilsPlatformError("nothing known about platform '%s'" % os.name)
+
+
+_environ_checked = 0
+def check_environ ():
+
+    global _environ_checked
+    if _environ_checked:
+        return
+
+    if os.name == 'posix' and 'HOME' not in os.environ:
+        import pwd
+        os.environ['HOME'] = pwd.getpwuid(os.getuid())[5]
+
+    if 'PLAT' not in os.environ:
+        os.environ['PLAT'] = get_platform()
+
+    _environ_checked = 1
+
+
+def subst_vars (s, local_vars):
+
+    check_environ()
+    def _subst (match, local_vars=local_vars):
+        var_name = match.group(1)
+        if var_name in local_vars:
+            return str(local_vars[var_name])
+        else:
+            return os.environ[var_name]
+
+    try:
+        return re.sub(r'\$([a-zA-Z_][a-zA-Z_0-9]*)', _subst, s)
+    except KeyError as var:
+        raise ValueError("invalid variable '$%s'" % var)
+*****
+<<< Go One is a half of another
+
+func (p *printer) commentsHaveNewline(list []*ast.Comment) bool {
+        // len(list) > 0
+        line := p.lineFor(list[0].Pos())
+        for i, c := range list {
+                if i > 0 && p.lineFor(list[i].Pos()) != line {
+                        // not all comments on the same line
+                        return true
+                }
+                if t := c.Text; len(t) >= 2 && (t[1] == '/' || strings.Contains(t, "\n")) {
+                        return true
+                }
+        }
+        _ = line
+        return false
+}
+
+func (p *printer) nextComment() {
+        for p.cindex < len(p.comments) {
+                c := p.comments[p.cindex]
+                p.cindex++
+                if list := c.List; len(list) > 0 {
+                        p.comment = c
+                        p.commentOffset = p.posFor(list[0].Pos()).Offset
+                        p.commentNewline = p.commentsHaveNewline(list)
+                        return
+                }
+                // we should not reach here (correct ASTs don't have empty
+                // ast.CommentGroup nodes), but be conservative and try again
+        }
+        // no more comments
+        p.commentOffset = infinity
+}
+
+func (p *printer) internalError(msg ...interface{}) {
+        if debug {
+                fmt.Print(p.pos.String() + ": ")
+                fmt.Println(msg...)
+                panic("go/printer")
+        }
+}
+
+func (p *printer) posFor(pos token.Pos) token.Position {
+        // not used frequently enough to cache entire token.Position
+        return p.fset.Position(pos)
+}
+
+func (p *printer) lineFor(pos token.Pos) int {
+        if pos != p.cachedPos {
+                p.cachedPos = pos
+                p.cachedLine = p.fset.Position(pos).Line
+        }
+        return p.cachedLine
+}
+
+// atLineBegin emits a //line comment if necessary and prints indentation.
+func (p *printer) atLineBegin(pos token.Position) {
+        // write a //line comment if necessary
+        if p.Config.Mode&SourcePos != 0 && pos.IsValid() && (p.out.Line != pos.Line || p.out.Filename != pos.Filename) {
+                p.output = append(p.output, tabwriter.Escape) // protect '\n' in //line from tabwriter interpretation
+                p.output = append(p.output, fmt.Sprintf("//line %s:%d\n", pos.Filename, pos.Line)...)
+                p.output = append(p.output, tabwriter.Escape)
+                // p.out must match the //line comment
+                p.out.Filename = pos.Filename
+                p.out.Line = pos.Line
+        }
+
+        // write indentation
+        // use "hard" htabs - indentation columns
+        // must not be discarded by the tabwriter
+        n := p.Config.Indent + p.indent // include base indentation
+        for i := 0; i < n; i++ {
+                p.output = append(p.output, '\t')
+        }
+
+        // update positions
+        p.pos.Offset += n
+        p.pos.Column += n
+        p.out.Column += n
+}
+
+// writeByte writes ch n times to p.output and updates p.pos.
+func (p *printer) writeByte(ch byte, n int) {
+        if p.out.Column == 1 {
+                p.atLineBegin(p.pos)
+        }
+
+        for i := 0; i < n; i++ {
+                p.output = append(p.output, ch)
+        }
+
+        // update positions
+        p.pos.Offset += n
+        if ch == '\n' || ch == '\f' {
+                p.pos.Line += n
+                p.out.Line += n
+                p.pos.Column = 1
+                p.out.Column = 1
+                return
+        }
+        p.pos.Column += n
+        p.out.Column += n
+}
+
+=====
+
+func (p *printer) commentsHaveNewline(list []*ast.Comment) bool {
+        // len(list) > 0
+        line := p.lineFor(list[0].Pos())
+        for i, c := range list {
+                if i > 0 && p.lineFor(list[i].Pos()) != line {
+                        // not all comments on the same line
+                        return true
+                }
+                if t := c.Text; len(t) >= 2 && (t[1] == '/' || strings.Contains(t, "\n")) {
+                        return true
+                }
+        }
+        _ = line
+        return false
+}
+
+func (p *printer) nextComment() {
+        for p.cindex < len(p.comments) {
+                c := p.comments[p.cindex]
+                p.cindex++
+                if list := c.List; len(list) > 0 {
+                        p.comment = c
+                        p.commentOffset = p.posFor(list[0].Pos()).Offset
+                        p.commentNewline = p.commentsHaveNewline(list)
+                        return
+                }
+                // we should not reach here (correct ASTs don't have empty
+                // ast.CommentGroup nodes), but be conservative and try again
+        }
+        // no more comments
+        p.commentOffset = infinity
+}
+
+func (p *printer) internalError(msg ...interface{}) {
+        if debug {
+                fmt.Print(p.pos.String() + ": ")
+                fmt.Println(msg...)
+                panic("go/printer")
+        }
+}
+
+func (p *printer) posFor(pos token.Pos) token.Position {
+        // not used frequently enough to cache entire token.Position
+        return p.fset.Position(pos)
+}
+
+func (p *printer) lineFor(pos token.Pos) int {
+        if pos != p.cachedPos {
+                p.cachedPos = pos
+                p.cachedLine = p.fset.Position(pos).Line
+        }
+        return p.cachedLine
+}
+*****
+<<< Python Removed documentation strings and comment
+
+def adj(g):
+    """
+    Convert a directed graph to an adjaceny matrix.
+    >>> g = {1: {2: 3, 3: 8, 5: -4}, 2: {4: 1, 5: 7}, 3: {2: 4}, 4: {1: 2, 3: -5}, 5: {4: 6}}
+    >>> adj(g)
+    {1: {1: 0, 2: 3, 3: 8, 4: inf, 5: -4}, 2: {1: inf, 2: 0, 3: inf, 4: 1, 5: 7}, 3: {1: inf, 2: 4, 3: 0, 4: inf, 5: inf}, 4: {1: 2, 2: inf, 3: -5, 4: 0, 5: inf}, 5: {1: inf, 2: inf, 3: inf, 4: 6, 5: 0}}
+    """
+    vertices = g.keys()
+  # create dictionary
+    dist = {}
+  # computing distance
+    for i in vertices:
+        dist[i] = {}
+        for j in vertices:
+     # If no index
+            try:
+                dist[i][j] = g[i][j]
+            except KeyError:
+                # the distance from a node to itself is 0
+                if i == j:
+                    dist[i][j] = 0
+                # the distance from a node to an unconnected node is infinity
+                else:
+                    dist[i][j] = float('inf')
+    return dist
+
+
+def fw(g):
+    """
+    Run the Floyd Warshall algorithm on an adjacency matrix.
+
+    The Floyd Warshall algorithm computes the minimum cost of a simple path between each
+    pair of vertices.
+    >>> g = {1: {2: 3, 3: 8, 5: -4}, 2: {4: 1, 5: 7}, 3: {2: 4}, 4: {1: 2, 3: -5}, 5: {4: 6}}
+    >>> fw(adj(g))
+    {1: {1: 0, 2: 1, 3: -3, 4: 2, 5: -4}, 2: {1: 3, 2: 0, 3: -4, 4: 1, 5: -1}, 3: {1: 7, 2: 4, 3: 0, 4: 5, 5: 3}, 4: {1: 2, 2: -1, 3: -5, 4: 0, 5: -2}, 5: {1: 8, 2: 5, 3: 1, 4: 6, 5: 0}}
+    >>> h = {1: {2: 1}, 2: {1 : 1, 3: -1}, 3: {2: -1}}
+    >>> fw(adj(h))
+    """
+    vertices = g.keys()
+
+    d = dict(g)  # copy g
+    for k in vertices:
+  # Another vertices
+        for i in vertices:
+    # Another vertices
+            for j in vertices:
+      # Find min
+                d[i][j] = min(d[i][j], d[i][k] + d[k][j])
+    return d
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+
+=====
+
+def adj(g):
+    vertices = g.keys()
+    dist = {}
+    for i in vertices:
+        dist[i] = {}
+        for j in vertices:
+            try:
+                dist[i][j] = g[i][j]
+            except KeyError:
+                if i == j:
+                    dist[i][j] = 0
+                else:
+                    dist[i][j] = float('inf')
+    return dist
+
+
+def fw(g):
+
+    vertices = g.keys()
+    d = dict(g)
+    for k in vertices:
+        for i in vertices:
+            for j in vertices:
+                d[i][j] = min(d[i][j], d[i][k] + d[k][j])
+    return d
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+*****
+<<< Go Removed documentation strings and comment
+
+package sort_test
+
+import (
+    "fmt"
+    "sort"
+)
+
+type Change struct {
+    user     string
+    language string
+    lines    int
+}
+
+type lessFunc func(p1, p2 *Change) bool
+
+type multiSorter struct {
+    changes []Change
+    less    []lessFunc
+}
+
+func (ms *multiSorter) Sort(changes []Change) {
+    ms.changes = changes
+    sort.Sort(ms)
+}
+
+// OrderedBy returns a Sorter that sorts using the less functions, in order.
+// Call its Sort method to sort the data.
+func OrderedBy(less ...lessFunc) *multiSorter {
+    return &multiSorter{
+        less: less,
+    }
+}
+
+// Len is part of sort.Interface.
+func (ms *multiSorter) Len() int {
+    return len(ms.changes)
+}
+
+// Swap is part of sort.Interface.
+func (ms *multiSorter) Swap(i, j int) {
+    ms.changes[i], ms.changes[j] = ms.changes[j], ms.changes[i]
+}
+
+// Less is part of sort.Interface. It is implemented by looping along the
+// less functions until it finds a comparison that is either Less or
+// !Less. Note that it can call the less functions twice per call. We
+// could change the functions to return -1, 0, 1 and reduce the
+// number of calls for greater efficiency: an exercise for the reader.
+func (ms *multiSorter) Less(i, j int) bool {
+    p, q := &ms.changes[i], &ms.changes[j]
+    // Try all but the last comparison.
+    var k int
+    for k = 0; k < len(ms.less)-1; k++ {
+        less := ms.less[k]
+        switch {
+        case less(p, q):
+            // p < q, so we have a decision.
+            return true
+        case less(q, p):
+            // p > q, so we have a decision.
+            return false
+        }
+        // p == q; try the next comparison.
+    }
+    // All comparisons to here said "equal", so just return whatever
+    // the final comparison reports.
+    return ms.less[k](p, q)
+}
+
+var changes = []Change{
+    {"gri", "Go", 100},
+    {"ken", "C", 150},
+    {"glenda", "Go", 200},
+    {"rsc", "Go", 200},
+    {"r", "Go", 100},
+    {"ken", "Go", 200},
+    {"dmr", "C", 100},
+    {"r", "C", 150},
+    {"gri", "Smalltalk", 80},
+}
+
+// ExampleMultiKeys demonstrates a technique for sorting a struct type using different
+// sets of multiple fields in the comparison. We chain together "Less" functions, each of
+// which compares a single field.
+func Example_sortMultiKeys() {
+    // Closures that order the Change structure.
+    user := func(c1, c2 *Change) bool {
+        return c1.user < c2.user
+    }
+    language := func(c1, c2 *Change) bool {
+        return c1.language < c2.language
+    }
+    increasingLines := func(c1, c2 *Change) bool {
+        return c1.lines < c2.lines
+    }
+    decreasingLines := func(c1, c2 *Change) bool {
+        return c1.lines > c2.lines // Note: > orders downwards.
+    }
+
+    // Simple use: Sort by user.
+    OrderedBy(user).Sort(changes)
+    fmt.Println("By user:", changes)
+
+    // More examples.
+    OrderedBy(user, increasingLines).Sort(changes)
+    fmt.Println("By user,<lines:", changes)
+
+    OrderedBy(user, decreasingLines).Sort(changes)
+    fmt.Println("By user,>lines:", changes)
+
+    OrderedBy(language, increasingLines).Sort(changes)
+    fmt.Println("By language,<lines:", changes)
+
+    OrderedBy(language, increasingLines, user).Sort(changes)
+    fmt.Println("By language,<lines,user:", changes)
+
+
+=====
+
+package sort_test
+
+import (
+    "fmt"
+    "sort"
+)
+
+
+type Change struct {
+    user     string
+    language string
+    lines    int
+}
+
+type lessFunc func(p1, p2 *Change) bool
+
+
+type multiSorter struct {
+    changes []Change
+    less    []lessFunc
+}
+
+
+func (ms *multiSorter) Sort(changes []Change) {
+    ms.changes = changes
+    sort.Sort(ms)
+}
+
+
+func OrderedBy(less ...lessFunc) *multiSorter {
+    return &multiSorter{
+        less: less,
+    }
+}
+
+
+func (ms *multiSorter) Len() int {
+    return len(ms.changes)
+}
+
+
+func (ms *multiSorter) Swap(i, j int) {
+    ms.changes[i], ms.changes[j] = ms.changes[j], ms.changes[i]
+}
+
+
+func (ms *multiSorter) Less(i, j int) bool {
+    p, q := &ms.changes[i], &ms.changes[j]
+    var k int
+    for k = 0; k < len(ms.less)-1; k++ {
+        less := ms.less[k]
+        switch {
+        case less(p, q):
+            return true
+        case less(q, p):
+            return false
+        }
+    }
+    return ms.less[k](p, q)
+}
+
+var changes = []Change{
+    {"gri", "Go", 100},
+    {"ken", "C", 150},
+    {"glenda", "Go", 200},
+    {"rsc", "Go", 200},
+    {"r", "Go", 100},
+    {"ken", "Go", 200},
+    {"dmr", "C", 100},
+    {"r", "C", 150},
+    {"gri", "Smalltalk", 80},
+}
+
+func Example_sortMultiKeys() {
+    user := func(c1, c2 *Change) bool {
+        return c1.user < c2.user
+    }
+    language := func(c1, c2 *Change) bool {
+        return c1.language < c2.language
+    }
+    increasingLines := func(c1, c2 *Change) bool {
+        return c1.lines < c2.lines
+    }
+    decreasingLines := func(c1, c2 *Change) bool {
+        return c1.lines > c2.lines // Note: > orders downwards.
+    }
+
+    OrderedBy(user).Sort(changes)
+    fmt.Println("By user:", changes)
+
+    OrderedBy(user, increasingLines).Sort(changes)
+    fmt.Println("By user,<lines:", changes)
+
+    OrderedBy(user, decreasingLines).Sort(changes)
+    fmt.Println("By user,>lines:", changes)
+
+    OrderedBy(language, increasingLines).Sort(changes)
+    fmt.Println("By language,<lines:", changes)
+
+    OrderedBy(language, increasingLines, user).Sort(changes)
+    fmt.Println("By language,<lines,user:", changes)
+*****
+<<< Python Shuffled functions
+
+import sys
+import heapq
+import copy
+
+class Node:
+    def __init__(self, contents, cost, hcost=0):
+        self.contents = contents  # representation of the game board
+        self.cost = cost          # cost to get to this node
+        self.hcost = hcost        # estimated heuristic cost to goal
+        self.parent = None        # link to parent node in tree
+    def setParent(self, parent):
+        self.parent = parent
+
+    def getChildNodes(self, moves):
+        children = []
+        board = self.contents
+        for cell in board.keys():
+            if board[cell] != None:  # there is a piece that can be moved
+                for move in moves[cell]:  # examine legal moves for piece
+                    if board[move] == None:  # position is available
+                        temp = board.copy()
+                        # place the piece in its new position
+                        temp[cell] = board[move]
+                        temp[move] = board[cell]
+                        # create node containing the new configuration
+                        child = Node(temp, self.cost+1)
+                        child.hcost = distance(child)
+                        children.append(child)
+        return children
+    # evaluate if this node meets the goal criteria
+    def isGoal(self):
+        if (self.contents[1] == "black") and \
+           (self.contents[6] == "black") and \
+           (self.contents[5] == "white") and \
+           (self.contents[7] == "white"):
+            return True
+        else:
+            return False
+
+    def staticCast(self):
+        # return a tuple only containing filled cells
+        return tuple([(cell, self.contents[cell]) for cell in
+                      self.contents.keys() if self.contents[cell] is not None])
+
+# comparison function for keeping our priority queue in order
+# keep less costly nodes toward the front of the queue (explore first)
+def compare(a,b):
+    if (a.cost+a.hcost) < (b.cost+b.hcost): return -1
+    elif (a.cost+a.hcost) == (b.cost+b.hcost): return 0
+    else: return 1
+
+# return a list of nodes from the start position to the goal position
+def getPath(goal, start):
+    current = copy.copy(goal)
+    path = []
+    # start at the goal and follow the parent chain to the beginning
+    path.append(goal)
+    while current.contents != start.contents:
+        up = current.parent
+        path.append(up)
+        current = up
+    # reverse the list to give the start-to-goal ordering
+    path.reverse()
+    return path
+
+# print a representation of a game board
+def showDiagram(board):
+    for i in range(1, 11):
+        # line breaks
+        if i in [2, 6, 9]: print "\n"
+        if board[i] != None:
+            print board[i][0],
+        else: print "_",
+    print "\n"
+
+
+dist = {1: (0, 1), 2: (3, 4), 3: (6, 7), 4: (1, 2), 5: (2, 0),
+        6: (0, 3), 7: (1, 0), 8: (4, 5), 9: (5, 6), 10: (2, 3)}
+
+def distance(node):
+    distance = 0
+    for cell in [c for c in node.contents.keys()
+                 if node.contents[c] is not None]:
+        if node.contents[cell] == "black":
+            distance += dist[cell][0]
+        else:
+            distance += dist[cell][1]
+    return distance
+
+# driver function for the A-Star tree search
+# takes a starting board configuration and a dictionary of legal moves
+def aStarSearch(board, moves):
+    import heapq
+    # priority queue to store nodes
+    pq = []
+    heapq.heapify(pq)
+
+    #dictionary to store previously visited nodes
+    visited = {}
+
+
+    start = Node(board, 0)
+    heapq.heappush(pq, start)
+
+    while (len(pq) > 0):
+        node = heapq.heappop(pq)
+        visNode = node.staticCast()
+        if visNode not in visited:
+            if node.isGoal():
+                return "We've got a winner.", node
+            else:
+                children = node.getChildNodes(moves)
+                for child in children:
+                    child.setParent(node)
+                    heapq.heappush(pq, child)
+                    visited[visNode] = True
+                    pq.sort(compare)  # keep less costly nodes at the front
+
+    return "No solution.", None
+
+def printHelp():
+    print "-p\tPath: reconstruct full path to goal"
+    sys.exit()
+
+def main():
+    if "-h" in sys.argv or "--help" in sys.argv:
+        printHelp()
+
+
+    board = {}
+    for i in range(1, 11, 1): board[i] = None
+    board[1] = "white"
+    board[6] = "white"
+    board[5] = "black"
+    board[7] = "black"
+
+    # dictionary defines valid operators (legal moves)
+    moves = { 1: [4, 7],
+              2: [8, 10],
+              3: [9],
+              4: [1, 6, 10],
+              5: [7],
+              6: [4],
+              7: [1, 5],
+              8: [2, 9],
+              9: [8, 3],
+              10: [2, 4] }
+
+    ans, goal = aStarSearch(board, moves)
+    print ans
+
+    # reconstruct path
+    if "-p" in sys.argv:
+        if ans == "We've got a winner.":
+            start = Node(board, 0)
+            path = getPath(goal, start)
+            i = 0
+            for node in path:
+                print "step ", i, ":"
+                showDiagram(node.contents)
+                i += 1
+
+if __name__ == "__main__":
+    main()
+
+=====
+
+import sys
+import heapq
+import copy
+
+class Node:
+    def __init__(self, contents, cost, hcost=0):
+        self.contents = contents  # representation of the game board
+        self.cost = cost          # cost to get to this node
+        self.hcost = hcost        # estimated heuristic cost to goal
+        self.parent = None        # link to parent node in tree
+
+    def staticCast(self):
+        # return a tuple only containing filled cells
+        return tuple([(cell, self.contents[cell]) for cell in
+                      self.contents.keys() if self.contents[cell] is not None])
+
+    def getChildNodes(self, moves):
+        children = []
+        board = self.contents
+        for cell in board.keys():
+            if board[cell] != None:  # there is a piece that can be moved
+                for move in moves[cell]:  # examine legal moves for piece
+                    if board[move] == None:  # position is available
+                        temp = board.copy()
+                        # place the piece in its new position
+                        temp[cell] = board[move]
+                        temp[move] = board[cell]
+                        # create node containing the new configuration
+                        child = Node(temp, self.cost+1)
+                        child.hcost = distance(child)
+                        children.append(child)
+        return children
+
+    def setParent(self, parent):
+        self.parent = parent
+
+    def isGoal(self):
+        if (self.contents[1] == "black") and \
+           (self.contents[6] == "black") and \
+           (self.contents[5] == "white") and \
+           (self.contents[7] == "white"):
+            return True
+        else:
+            return False
+
+
+def getPath(goal, start):
+    current = copy.copy(goal)
+    path = []
+    # start at the goal and follow the parent chain to the beginning
+    path.append(goal)
+    while current.contents != start.contents:
+        up = current.parent
+        path.append(up)
+        current = up
+    # reverse the list to give the start-to-goal ordering
+    path.reverse()
+    return path
+
+def compare(a,b):
+    if (a.cost+a.hcost) < (b.cost+b.hcost): return -1
+    elif (a.cost+a.hcost) == (b.cost+b.hcost): return 0
+    else: return 1
+
+
+# print a representation of a game board
+def showDiagram(board):
+    for i in range(1, 11):
+        # line breaks
+        if i in [2, 6, 9]: print "\n"
+        if board[i] != None:
+            print board[i][0],
+        else: print "_",
+    print "\n"
+
+
+dist = {1: (0, 1), 2: (3, 4), 3: (6, 7), 4: (1, 2), 5: (2, 0),
+        6: (0, 3), 7: (1, 0), 8: (4, 5), 9: (5, 6), 10: (2, 3)}
+
+def distance(node):
+    distance = 0
+    for cell in [c for c in node.contents.keys()
+                 if node.contents[c] is not None]:
+        if node.contents[cell] == "black":
+            distance += dist[cell][0]
+        else:
+            distance += dist[cell][1]
+    return distance
+
+def printHelp():
+    print "-p\tPath: reconstruct full path to goal"
+    sys.exit()
+
+# driver function for the A-Star tree search
+# takes a starting board configuration and a dictionary of legal moves
+def aStarSearch(board, moves):
+    import heapq
+    # priority queue to store nodes
+    pq = []
+    heapq.heapify(pq)
+
+    #dictionary to store previously visited nodes
+    visited = {}
+
+
+    start = Node(board, 0)
+    heapq.heappush(pq, start)
+
+    while (len(pq) > 0):
+        node = heapq.heappop(pq)
+        visNode = node.staticCast()
+        if visNode not in visited:
+            if node.isGoal():
+                return "We've got a winner.", node
+            else:
+                children = node.getChildNodes(moves)
+                for child in children:
+                    child.setParent(node)
+                    heapq.heappush(pq, child)
+                    visited[visNode] = True
+                    pq.sort(compare)  # keep less costly nodes at the front
+
+    return "No solution.", None
+
+
+def main():
+    if "-h" in sys.argv or "--help" in sys.argv:
+        printHelp()
+
+
+    board = {}
+    for i in range(1, 11, 1): board[i] = None
+    board[1] = "white"
+    board[6] = "white"
+    board[5] = "black"
+    board[7] = "black"
+
+    # dictionary defines valid operators (legal moves)
+    moves = { 1: [4, 7],
+              2: [8, 10],
+              3: [9],
+              4: [1, 6, 10],
+              5: [7],
+              6: [4],
+              7: [1, 5],
+              8: [2, 9],
+              9: [8, 3],
+              10: [2, 4] }
+
+    ans, goal = aStarSearch(board, moves)
+    print ans
+
+    if "-p" in sys.argv:
+        if ans == "We've got a winner.":
+            start = Node(board, 0)
+            path = getPath(goal, start)
+            i = 0
+            for node in path:
+                print "step ", i, ":"
+                showDiagram(node.contents)
+                i += 1
+
+if __name__ == "__main__":
+    main()
+*****
+<<< Go Shuffled functions
+
+func (p *printer) commentsHaveNewline(list []*ast.Comment) bool {
+        line := p.lineFor(list[0].Pos())
+        for i, c := range list {
+                if i > 0 && p.lineFor(list[i].Pos()) != line {
+                        // not all comments on the same line
+                        return true
+                }
+                if t := c.Text; len(t) >= 2 && (t[1] == '/' || strings.Contains(t, "\n")) {
+                        return true
+                }
+        }
+        _ = line
+        return false
+}
+
+func (p *printer) nextComment() {
+        for p.cindex < len(p.comments) {
+                c := p.comments[p.cindex]
+                p.cindex++
+                if list := c.List; len(list) > 0 {
+                        p.comment = c
+                        p.commentOffset = p.posFor(list[0].Pos()).Offset
+                        p.commentNewline = p.commentsHaveNewline(list)
+                        return
+                }
+
+        }
+
+        p.commentOffset = infinity
+}
+
+func (p *printer) internalError(msg ...interface{}) {
+        if debug {
+                fmt.Print(p.pos.String() + ": ")
+                fmt.Println(msg...)
+                panic("go/printer")
+        }
+}
+
+func (p *printer) posFor(pos token.Pos) token.Position {
+
+        return p.fset.Position(pos)
+}
+
+func (p *printer) lineFor(pos token.Pos) int {
+        if pos != p.cachedPos {
+                p.cachedPos = pos
+                p.cachedLine = p.fset.Position(pos).Line
+        }
+        return p.cachedLine
+}
+
+
+func (p *printer) atLineBegin(pos token.Position) {
+
+        if p.Config.Mode&SourcePos != 0 && pos.IsValid() && (p.out.Line != pos.Line || p.out.Filename != pos.Filename) {
+                p.output = append(p.output, tabwriter.Escape) // protect '\n' in //line from tabwriter interpretation
+                p.output = append(p.output, fmt.Sprintf("//line %s:%d\n", pos.Filename, pos.Line)...)
+                p.output = append(p.output, tabwriter.Escape)
+                p.out.Filename = pos.Filename
+                p.out.Line = pos.Line
+        }
+
+
+        n := p.Config.Indent + p.indent // include base indentation
+        for i := 0; i < n; i++ {
+                p.output = append(p.output, '\t')
+        }
+
+
+        p.pos.Offset += n
+        p.pos.Column += n
+        p.out.Column += n
+}
+
+
+func (p *printer) writeByte(ch byte, n int) {
+        if p.out.Column == 1 {
+                p.atLineBegin(p.pos)
+        }
+
+        for i := 0; i < n; i++ {
+                p.output = append(p.output, ch)
+        }
+
+        p.pos.Offset += n
+        if ch == '\n' || ch == '\f' {
+                p.pos.Line += n
+                p.out.Line += n
+                p.pos.Column = 1
+                p.out.Column = 1
+                return
+        }
+        p.pos.Column += n
+        p.out.Column += n
+}
+
+=====
+
+func (p *printer) nextComment() {
+        for p.cindex < len(p.comments) {
+                c := p.comments[p.cindex]
+                p.cindex++
+                if list := c.List; len(list) > 0 {
+                        p.comment = c
+                        p.commentOffset = p.posFor(list[0].Pos()).Offset
+                        p.commentNewline = p.commentsHaveNewline(list)
+                        return
+                }
+
+        }
+
+        p.commentOffset = infinity
+}
+
+func (p *printer) commentsHaveNewline(list []*ast.Comment) bool {
+        line := p.lineFor(list[0].Pos())
+        for i, c := range list {
+                if i > 0 && p.lineFor(list[i].Pos()) != line {
+                        // not all comments on the same line
+                        return true
+                }
+                if t := c.Text; len(t) >= 2 && (t[1] == '/' || strings.Contains(t, "\n")) {
+                        return true
+                }
+        }
+        _ = line
+        return false
+}
+
+
+func (p *printer) posFor(pos token.Pos) token.Position {
+
+        return p.fset.Position(pos)
+}
+
+func (p *printer) lineFor(pos token.Pos) int {
+        if pos != p.cachedPos {
+                p.cachedPos = pos
+                p.cachedLine = p.fset.Position(pos).Line
+        }
+        return p.cachedLine
+}
+
+func (p *printer) internalError(msg ...interface{}) {
+        if debug {
+                fmt.Print(p.pos.String() + ": ")
+                fmt.Println(msg...)
+                panic("go/printer")
+        }
+}
+
+
+func (p *printer) atLineBegin(pos token.Position) {
+
+        if p.Config.Mode&SourcePos != 0 && pos.IsValid() && (p.out.Line != pos.Line || p.out.Filename != pos.Filename) {
+                p.output = append(p.output, tabwriter.Escape) // protect '\n' in //line from tabwriter interpretation
+                p.output = append(p.output, fmt.Sprintf("//line %s:%d\n", pos.Filename, pos.Line)...)
+                p.output = append(p.output, tabwriter.Escape)
+                p.out.Filename = pos.Filename
+                p.out.Line = pos.Line
+        }
+
+
+        n := p.Config.Indent + p.indent // include base indentation
+        for i := 0; i < n; i++ {
+                p.output = append(p.output, '\t')
+        }
+
+
+        p.pos.Offset += n
+        p.pos.Column += n
+        p.out.Column += n
+}
+
+
+func (p *printer) writeByte(ch byte, n int) {
+        if p.out.Column == 1 {
+                p.atLineBegin(p.pos)
+        }
+
+        for i := 0; i < n; i++ {
+                p.output = append(p.output, ch)
+        }
+
+        p.pos.Offset += n
+        if ch == '\n' || ch == '\f' {
+                p.pos.Line += n
+                p.out.Line += n
+                p.pos.Column = 1
+                p.out.Column = 1
+                return
+        }
+        p.pos.Column += n
+        p.out.Column += n
+}
+*****
+<<< Python Small part of code inside another code
+
+def shellsort(a):
+   def new_increment(a):
+      c = int(len(a) / 2)
+      yield c
+      while c != 1:
+          if c == 2:
+              c = 1
+          else:
+              c = int(numpy.round(c/2.2))
+          yield c
+  for increment in new_increment(a):
+      for c in xrange(increment, len(a)):
+          for d in xrange(c, increment-1, -increment):
+              if a[d - increment] < a[d]:
+                  break
+              a[d],a[d - increment] = a[d - increment],a[d]
+  return a
+
+=====
+
+def quickSort(alist):
+   quickSortHelper(alist,0,len(alist)-1)
+
+def quickSortHelper(alist,first,last):
+   if first<last:
+
+       splitpoint = partition(alist,first,last)
+
+       quickSortHelper(alist,first,splitpoint-1)
+       quickSortHelper(alist,splitpoint+1,last)
+
+def shellsort(a):
+  def new_increment(a):
+      c = int(len(a) / 2)
+      yield c
+      while c != 1:
+          if c == 2:
+              c = 1
+          else:
+              c = int(numpy.round(c/2.2))
+          yield c
+  for increment in new_increment(a):
+      for c in xrange(increment, len(a)):
+          for d in xrange(c, increment-1, -increment):
+              if a[d - increment] < a[d]:
+                  break
+              a[d],a[d - increment] = a[d - increment],a[d]
+  return a
+
+def partition(alist,first,last):
+   pivotvalue = alist[first]
+
+   leftmark = first+1
+   rightmark = last
+
+   done = False
+   while not done:
+
+       while leftmark <= rightmark and \
+               alist[leftmark] <= pivotvalue:
+           leftmark = leftmark + 1
+
+       while alist[rightmark] >= pivotvalue and \
+               rightmark >= leftmark:
+           rightmark = rightmark -1
+
+       if rightmark < leftmark:
+           done = True
+       else:
+           temp = alist[leftmark]
+           alist[leftmark] = alist[rightmark]
+           alist[rightmark] = temp
+
+   temp = alist[first]
+   alist[first] = alist[rightmark]
+   alist[rightmark] = temp
+
+
+   return rightmark
+*****
+<<< Go Small part of code inside another code
+
+func binarySort(a []interface{}, lo, hi, start int, lt LessThan) (err error) {
+        if lo > start || start > hi {
+                return errors.New("lo <= start && start <= hi")
+        }
+
+        if start == lo {
+                start++
+        }
+        return
+}
+
+=====
+
+func binarySort(a []interface{}, lo, hi, start int, lt LessThan) (err error) {
+        if lo > start || start > hi {
+                return errors.New("lo <= start && start <= hi")
+        }
+
+        if start == lo {
+                start++
+        }
+
+        for ; start < hi; start++ {
+                pivot := a[start]
+
+                // Set left (and right) to the index where a[start] (pivot) belongs
+                left := lo
+                right := start
+
+                if left > right {
+                        return errors.New("left <= right")
+                }
+
+                for left < right {
+                        mid := (left + right) / 2
+                        if lt(pivot, a[mid]) {
+                                right = mid
+                        } else {
+                                left = mid + 1
+                        }
+                }
+
+                if left != right {
+                        return errors.New("left == right")
+                }
+
+                n := start - left // The number of elements to move
+                // just an optimization for copy in default case
+                if n <= 2 {
+                        if n == 2 {
+                                a[left+2] = a[left+1]
+                        }
+                        if n > 0 {
+                                a[left+1] = a[left]
+                        }
+                } else {
+                        copy(a[left+1:], a[left:left+n])
+                }
+                a[left] = pivot
+        }
+        return
+}
+
+func Sort(a []interface{}, lt LessThan) (err error) {
+        lo := 0
+        hi := len(a)
+        nRemaining := hi
+
+        if nRemaining < 2 {
+                return // Arrays of size 0 and 1 are always sorted
+        }
+
+        // If array is small, do a "mini-TimSort" with no merges
+        if nRemaining < _MIN_MERGE {
+                initRunLen, err := countRunAndMakeAscending(a, lo, hi, lt)
+                if err != nil {
+                        return err
+                }
+
+                return binarySort(a, lo, hi, lo+initRunLen, lt)
+        }
+}
+*****
+<<< Python Two approaches to the one problem
+
+def two_pass_variance(data):
+    num = 0
+    sum1 = 0
+    sum2 = 0
+
+    for item in data:
+        n    = n + 1
+        sum1 = sum1 + item
+
+    mean = sum1/n
+
+    for item in data:
+        sum2 = sum2 + (item - mean)*(item - mean)
+
+    variance = sum2/(n - 1)
+    return variance
+
+=====
+
+def compensated_variance(data):
+    n = 0
+    sum1 = 0
+    for x in data:
+        n = n + 1
+        sum1 = sum1 + x
+    mean = sum1/n
+
+    sum2 = 0
+    sum3 = 0
+    for x in data:
+        sum2 = sum2 + (x - mean)**2
+        sum3 = sum3 + (x - mean)
+    variance = (sum2 - sum3**2/n)/(n - 1)
+    return variance
+*****
+<<< Go Two approaches to the one problem
+
+package main
+
+import "os"
+
+func main() {
+    os.Stdout.WriteString("Hello, World!")
+}
+
+=====
+
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+*****
+<<< Python Different code
+
+def quickSort(alist):
+   quickSortHelper(alist,0,len(alist)-1)
+
+def quickSortHelper(alist,first,last):
+   if first<last:
+
+       splitpoint = partition(alist,first,last)
+
+       quickSortHelper(alist,first,splitpoint-1)
+       quickSortHelper(alist,splitpoint+1,last)
+
+
+def partition(alist,first,last):
+   pivotvalue = alist[first]
+
+   leftmark = first+1
+   rightmark = last
+
+   done = False
+   while not done:
+
+       while leftmark <= rightmark and \
+               alist[leftmark] <= pivotvalue:
+           leftmark = leftmark + 1
+
+       while alist[rightmark] >= pivotvalue and \
+               rightmark >= leftmark:
+           rightmark = rightmark -1
+
+       if rightmark < leftmark:
+           done = True
+       else:
+           temp = alist[leftmark]
+           alist[leftmark] = alist[rightmark]
+           alist[rightmark] = temp
+
+   temp = alist[first]
+   alist[first] = alist[rightmark]
+   alist[rightmark] = temp
+
+
+   return rightmark
+
+=====
+
+def adj(g):
+    """
+    Convert a directed graph to an adjaceny matrix.
+    >>> g = {1: {2: 3, 3: 8, 5: -4}, 2: {4: 1, 5: 7}, 3: {2: 4}, 4: {1: 2, 3: -5}, 5: {4: 6}}
+    >>> adj(g)
+    {1: {1: 0, 2: 3, 3: 8, 4: inf, 5: -4}, 2: {1: inf, 2: 0, 3: inf, 4: 1, 5: 7}, 3: {1: inf, 2: 4, 3: 0, 4: inf, 5: inf}, 4: {1: 2, 2: inf, 3: -5, 4: 0, 5: inf}, 5: {1: inf, 2: inf, 3: inf, 4: 6, 5: 0}}
+    """
+    vertices = g.keys()
+  # create dictionary
+    dist = {}
+  # computing distance
+    for i in vertices:
+        dist[i] = {}
+        for j in vertices:
+     # If no index
+            try:
+                dist[i][j] = g[i][j]
+            except KeyError:
+                # the distance from a node to itself is 0
+                if i == j:
+                    dist[i][j] = 0
+                # the distance from a node to an unconnected node is infinity
+                else:
+                    dist[i][j] = float('inf')
+    return dist
+
+
+def fw(g):
+    """
+    Run the Floyd Warshall algorithm on an adjacency matrix.
+
+    The Floyd Warshall algorithm computes the minimum cost of a simple path between each
+    pair of vertices.
+    >>> g = {1: {2: 3, 3: 8, 5: -4}, 2: {4: 1, 5: 7}, 3: {2: 4}, 4: {1: 2, 3: -5}, 5: {4: 6}}
+    >>> fw(adj(g))
+    {1: {1: 0, 2: 1, 3: -3, 4: 2, 5: -4}, 2: {1: 3, 2: 0, 3: -4, 4: 1, 5: -1}, 3: {1: 7, 2: 4, 3: 0, 4: 5, 5: 3}, 4: {1: 2, 2: -1, 3: -5, 4: 0, 5: -2}, 5: {1: 8, 2: 5, 3: 1, 4: 6, 5: 0}}
+    >>> h = {1: {2: 1}, 2: {1 : 1, 3: -1}, 3: {2: -1}}
+    >>> fw(adj(h))
+    """
+    vertices = g.keys()
+
+    d = dict(g)  # copy g
+    for k in vertices:
+  # Another vertices
+        for i in vertices:
+    # Another vertices
+            for j in vertices:
+      # Find min
+                d[i][j] = min(d[i][j], d[i][k] + d[k][j])
+    return d
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+*****
+<<< Go Different code
+
+package main
+
+import (
+        "fmt"
+
+        "github.com/google/go-github/github"
+)
+
+func main() {
+        client := github.NewClient(nil)
+
+        fmt.Println("Recently updated repositories owned by user willnorris:")
+
+        opt := &github.RepositoryListOptions{Type: "owner", Sort: "updated", Direction: "desc"}
+        repos, _, err := client.Repositories.List("willnorris", opt)
+        if err != nil {
+                fmt.Printf("error: %v\n\n", err)
+        } else {
+                fmt.Printf("%v\n\n", github.Stringify(repos))
+        }
+
+        rate, _, err := client.RateLimit()
+        if err != nil {
+                fmt.Printf("Error fetching rate limit: %#v\n\n", err)
+        } else {
+                fmt.Printf("API Rate Limit: %#v\n\n", rate)
+        }
+}
+
+=====
+
+func (ms *multiSorter) Less(i, j int) bool {
+    p, q := &ms.changes[i], &ms.changes[j]
+    // Try all but the last comparison.
+    var k int
+    for k = 0; k < len(ms.less)-1; k++ {
+        less := ms.less[k]
+        switch {
+        case less(p, q):
+            // p < q, so we have a decision.
+            return true
+        case less(q, p):
+            // p > q, so we have a decision.
+            return false
+        }
+        // p == q; try the next comparison.
+    }
+    // All comparisons to here said "equal", so just return whatever
+    // the final comparison reports.
+    return ms.less[k](p, q)
+}
+
+var changes = []Change{
+    {"gri", "Go", 100},
+    {"ken", "C", 150},
+    {"glenda", "Go", 200},
+    {"rsc", "Go", 200},
+    {"r", "Go", 100},
+    {"ken", "Go", 200},
+    {"dmr", "C", 100},
+    {"r", "C", 150},
+    {"gri", "Smalltalk", 80},
+}
+*****
+<<< Python "Hello World"
+
+import sys
+sys.stdout.write("Hello World")
+
+=====
+
+if __name__ == "__main__":
+    greetings = "Hello, World!"
+    print greetings
+*****
+<<< Go "Hello World"
+
+package main
+
+import "os"
+
+func main() {
+    os.Stdout.WriteString("Hello, World!")
+}
+
+=====
+
+package main
+
+import "fmt"
+
+func main() {
+    var s string
+    s += "Hello, World!"
+    fmt.Println(s)
+}
