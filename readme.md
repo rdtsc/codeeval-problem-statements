@@ -1,4 +1,4 @@
-# CodeEval Problem Statements
+# CodeEval (Defunct) Problem Statements
 
 As of 2018-02-12, [CodeEval][ce] has ceased operations. This (unofficial)
 repository mirrors* the problem statements for all 239‡ interactive challenges
@@ -287,7 +287,7 @@ All third-party content, referenced product names, trademarks, images, and
 logos are property of their respective owners.
 
 
-[ce]:      https://www.codeeval.com/
+[ce]:      https://web.archive.org/web/20180212230457/https://www.codeeval.com/
            "CodeEval - Coding Challenges for the World's Best Developers"
 
 [lic-me]:  http://opensource.org/licenses/MIT/
